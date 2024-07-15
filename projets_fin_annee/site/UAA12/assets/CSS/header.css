@@ -1,0 +1,23 @@
+header {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-home {
+    background-image: linear-gradient(to bottom, red, blue);
+    background-clip: text;
+    color: transparent;
+}
+
+.menu-signIN {
+    background-image: linear-gradient(to right, red, blue);
+    background-clip: text;
+    color: transparent;
+}
+
+ul {
+    margin: 0;
+    /* important de laisser ça car sinon il y a une bordure blanche autour du header */
+
+}

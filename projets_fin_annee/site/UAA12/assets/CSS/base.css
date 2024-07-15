@@ -1,0 +1,18 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  font-size: 50px;
+}
+
+body{
+    margin: 0;
+}
+
+.sign-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
