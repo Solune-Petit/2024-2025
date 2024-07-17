@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/CSS/flex.css">
     <link rel="stylesheet" href="assets/CSS/base.css">
     <link rel="stylesheet" href="assets/CSS/header.css">
+    <link rel="stylesheet" href="assets/CSS/sign.css">
+    <script src="assets/javascript/javascript.js"></script>
     <title><?= $title ?></title>
 </head>
 

@@ -1,4 +1,4 @@
-<ul class="flexible space-evenly header">
+<ul class="flexible space-evenly header align-item-center">
 
     <li class="menu"><a href="home"><span class="material-symbols-outlined menu-home">home</span></a></li>
     

@@ -9,10 +9,7 @@
 
 body{
     margin: 0;
-}
-
-.sign-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    background-color: #2c0a5e;
+    /* background-color: darkcyan; */
 }
