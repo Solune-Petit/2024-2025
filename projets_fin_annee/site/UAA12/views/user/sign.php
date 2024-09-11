@@ -3,21 +3,21 @@
         <input type="checkbox" id="chk" aria-hidden="true">
 
         <div class="sign-login">
-            <form class="sign-form">
-                <label for="chk" aria-hidden="true">Log in</label>
-                <input class="sign-input" type="email" name="email" placeholder="Email" required="">
-                <input class="sign-input" type="password" name="pswd" placeholder="Password" required="">
-                <button>Log in</button>
+            <form class="sign-form" method="post">
+                <label for="chk" aria-hidden="true">Se connecter</label>
+                <input class="sign-input" type="email" name="email" placeholder="Email" id="email" required="">
+                <input class="sign-input" type="password" name="password" placeholder="Mot de Passe" id="email" required="">
+                <button name="connectBTN">Se connecter</button>
             </form>
         </div>
 
         <div class="sign-register">
-            <form class="sign-form">
-                <label for="chk" aria-hidden="true">Register</label>
-                <input class="sign-input" type="text" name="txt" placeholder="Username" required="">
-                <input class="sign-input" type="email" name="email" placeholder="Email" required="">
-                <input class="sign-input" type="password" name="pswd" placeholder="Password" required="">
-                <button>Register</button>
+            <form class="sign-form" method="post">
+                <label for="chk" aria-hidden="true">S'inscrire</label>
+                <input class="sign-input" type="text" name="login" placeholder="Nom d'utillisateur" id="login" required>
+                <input class="sign-input" type="email" name="email" placeholder="Email" id="email" required>
+                <input class="sign-input" type="password" name="password" placeholder="Mot de Passe" id="password" required>
+                <button name="registerBTN">S'inscrire</button>
             </form>
         </div>
     </div>

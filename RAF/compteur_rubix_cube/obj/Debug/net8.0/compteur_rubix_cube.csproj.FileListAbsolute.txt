@@ -1,0 +1,15 @@
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\bin\Debug\net8.0\compteur_rubix_cube.exe
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\bin\Debug\net8.0\compteur_rubix_cube.deps.json
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\bin\Debug\net8.0\compteur_rubix_cube.runtimeconfig.json
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\bin\Debug\net8.0\compteur_rubix_cube.dll
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\bin\Debug\net8.0\compteur_rubix_cube.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.AssemblyInfoInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.AssemblyInfo.cs
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.csproj.CoreCompileInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.sourcelink.json
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.dll
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\refint\compteur_rubix_cube.dll
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\compteur_rubix_cube.genruntimeconfig.cache
+C:\Users\petit\Desktop\ecole\2024-2025\informatique\RAF\compteur_rubix_cube\obj\Debug\net8.0\ref\compteur_rubix_cube.dll

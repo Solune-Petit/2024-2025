@@ -1,0 +1,48 @@
+.hI1 {
+    grid-area: hI1;
+}
+
+.mI1 {
+    grid-area: mI1;
+    background-color: yellow;
+}
+
+.mI2 {
+    grid-area: mI2;
+    background-color: purple;
+}
+
+.mI3 {
+    grid-area: mI3;
+    background-color: blue;
+    /* grid-column-start: 2;
+    grid-column-end: 3 ; */
+}
+
+.mI4{
+    grid-area: mI4;
+    background-color: red;
+}
+
+.mI5{
+    grid-area: mI5;
+    background-color: crimson;
+}
+
+main{
+    display: grid;
+
+    grid-template-areas:
+    'mI1 mI5 mI5 mI5 mI5 mI5 mI5'
+    'mI1 mI3 mI3 mI3 mI2 mI2 mI2'
+    'mI1 mI4 mI4 mI4 mI4 mI4 mI4';
+    background-color: black;
+    padding: 50px;
+    border-radius: 50px;
+    gap: 50px;
+}
+
+div{
+    font-size: 5em;
+    text-align: center;
+}

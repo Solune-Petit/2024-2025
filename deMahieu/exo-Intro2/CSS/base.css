@@ -1,0 +1,72 @@
+body{
+    background-color: #4effef;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    min-height: 802px;
+}
+
+header, footer{
+    
+}
+
+header {
+    background-color: #73a6ad;
+}
+
+h1 {
+    color: rgb(24, 61, 61);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    text-align: center;
+}
+
+ul{
+    padding: 15px;
+    color: #D8A7CA;
+}
+
+li{
+    padding: 0 5px 0 5px;
+}
+
+footer{
+    background-image: url("../img/certified.JPG");
+    min-width: 100%;
+    min-height: 200px;
+}
+
+/* bloc de gauche */
+
+.coment{
+    max-width: 1000px;
+    border: black;
+    border-style: dashed;
+    border-radius: 2px;
+}
+
+.coment>div>p{
+    max-width: 500px;
+}
+
+.coment>div>img {
+    height: 50px;
+    width: auto;
+    border-radius: 50px;
+} 
+
+/* bloc de droite */
+
+.card{
+    max-width: 200px;
+    border: black;
+    border-style: dashed;
+    border-radius: 2px;
+}
+
+.card>img{
+    width: 150px;
+}

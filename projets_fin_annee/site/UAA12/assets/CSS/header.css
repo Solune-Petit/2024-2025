@@ -16,6 +16,12 @@ header {
     color: transparent;
 }
 
+.menu-profile{
+    background-image: linear-gradient(to bottom, red, blue);
+    background-clip: text;
+    color: transparent;
+}
+
 ul {
     margin: 0;
     /* important de laisser ça car sinon il y a une bordure blanche autour du header */
