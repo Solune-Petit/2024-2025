@@ -1,72 +1,119 @@
 body{
-    background-color: #4effef;
-    margin: 0;
-    padding: 0;
+    background-color: #4EFFEF;
+}
+
+header{
+    width: 60%;
+    height: auto;
+    margin: auto;
 }
 
 main{
-    min-height: 802px;
+    width: 90%;
+    height: auto;
 }
 
-header, footer{
-    
+.menu{
+    margin: auto;
+    padding: 0;
+    justify-content: space-around;
+    background-color: #73A6AD;
+    list-style-type: none;
 }
 
-header {
-    background-color: #73a6ad;
-}
-
-h1 {
-    color: rgb(24, 61, 61);
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
-    text-align: center;
-}
-
-ul{
+.menu>li{
     padding: 15px;
+    font-size: 1.5em;
+}
+
+.menu>li>a{
+    text-decoration: none;
     color: #D8A7CA;
 }
 
-li{
-    padding: 0 5px 0 5px;
+h1{
+    margin-left: 15px;
+    font-family: cursive;
+    text-decoration: underline;
+    font-size: 2.5em;
+    text-shadow: 5px 5px 5px;
+    color: #C7B8EA;
+}
+
+h2{
+    text-decoration: underline double;
+    color: #9B97B2;
+}
+
+p{
+    text-align: justify;
+}
+
+main p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+    font-size: 0.8em;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.block_droite{
+    width: 90%;
+}
+
+.book{
+    width: 200px;
+    margin: 10px;
+    padding: 20px 10px;
+    border: 1px black dashed;
+}
+
+h3{
+    color: #D8A7CA;
+}
+
+.book>img{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment{
+    border: 1px black dotted;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.comment>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 0 0 20px;
 }
 
 footer{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
     background-image: url("../img/certified.JPG");
-    min-width: 100%;
-    min-height: 200px;
+    background-size:100% ;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
 }
 
-/* bloc de gauche */
-
-.coment{
-    max-width: 1000px;
-    border: black;
-    border-style: dashed;
-    border-radius: 2px;
+footer>div>ol{
+    color: whitesmoke;
 }
 
-.coment>div>p{
-    max-width: 500px;
-}
+footer>div>ol>li>a{
+    font-size: 0.9em;
+    text-decoration: none;
+    color: whitesmoke;
 
-.coment>div>img {
-    height: 50px;
-    width: auto;
-    border-radius: 50px;
-} 
-
-/* bloc de droite */
-
-.card{
-    max-width: 200px;
-    border: black;
-    border-style: dashed;
-    border-radius: 2px;
-}
-
-.card>img{
-    width: 150px;
 }
