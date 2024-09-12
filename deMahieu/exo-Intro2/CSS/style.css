@@ -1,30 +1,68 @@
-body{
+body {
     width: 80%;
     margin: auto;
 }
 
 main{
-
+    gap: 10px;
 }
 
-header{
-    width: fit-content;
-    margin: auto;
+main>div{
+    padding: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu>ul>li>a{
+    color: rgb(235, 171, 52);
+}
+
+.menu>ul>li{
+    padding: 15px;
+}
+
+.menu>ul{
+    background-color: black;
+}
+
+.menu>ul>li:hover{
+    animation-duration: 1s;
+    background-color: rgb(235, 171, 52);
+}
+
+.menu>ul>li>a:hover{
+    color: black;
+}
+
+header {
     background-image: url("../IMG/orangredglow.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-ul{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.title{
+.title {
     height: 250px;
-    
+
 }
 
-h1{
+h1 {
     font-size: 4em;
-    margin-right: 200px;
+}
+
+main>div {
+    background-color: black;
+    color: white;
+}
+
+footer{
+    background-color: black;
+    color: aliceblue;
 }
