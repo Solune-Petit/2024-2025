@@ -1,0 +1,30 @@
+body{
+    width: 80%;
+    margin: auto;
+}
+
+main{
+
+}
+
+header{
+    width: fit-content;
+    margin: auto;
+    background-image: url("../IMG/orangredglow.jpg");
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    height: 250px;
+    
+}
+
+h1{
+    font-size: 4em;
+    margin-right: 200px;
+}
