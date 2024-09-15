@@ -1,3 +1,7 @@
+html{
+    background-color: rgb(235, 171, 52);
+}
+
 body {
     width: 80%;
     margin: auto;
@@ -8,7 +12,7 @@ main{
 }
 
 main>div{
-    padding: 50px;
+    padding: 20px;
 }
 
 a {
@@ -28,7 +32,6 @@ a {
 }
 
 .menu>ul>li:hover{
-    animation-duration: 1s;
     background-color: rgb(235, 171, 52);
 }
 
@@ -60,6 +63,32 @@ h1 {
 main>div {
     background-color: black;
     color: white;
+}
+
+.gauche{
+    width: 20%;
+}
+
+.gauche>ul{
+    list-style-image: url(../IMG/bg.gif);
+}
+
+.blocCentral{
+    width: 50%;
+}
+
+.droite{
+    width: 20%;
+}
+
+.droite>ul{
+    list-style-image: url(../IMG/bgliste.jpg);
+}
+
+.droite>a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.5em;
 }
 
 footer{
