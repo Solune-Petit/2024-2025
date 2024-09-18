@@ -12,7 +12,7 @@ main{
 }
 
 main>div{
-    padding: 20px;
+    padding: 40px;
 }
 
 a {
@@ -93,5 +93,9 @@ main>div {
 
 footer{
     background-color: black;
+    color: aliceblue;
+}
+
+footer a{
     color: aliceblue;
 }

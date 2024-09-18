@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root xmlns:nsd="https://structorizer.fisch.lu" version="3.30-13" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="petit" created="2024-09-12" changedby="petit" changed="2024-09-12" origin="Structorizer 3.30-13" text="&#34;ROL&#34;" comment="" color="ffffff" type="program" style="nice">
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.30-13" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="petit" created="2024-09-12" changedby="petit" changed="2024-09-17" origin="Structorizer 3.30-13" text="&#34;ROL&#34;" comment="" color="ffffff" type="program" style="nice">
 	<children>
-		<for text="&#34;for i = 0 ; i &#60;= nbrDeDecalage ; i++&#34;" comment="&#34;&#34;" counterVar="dummy_counter" startValue="i = 0 ; i &#60;= nbrDeDecalage ; i++" stepConst="1" style="FREETEXT" color="ffffff" disabled="0">
+		<for text="&#34;for j = 0 ; j &#60;= nbrDeDecalage ; j++&#34;" comment="&#34;&#34;" counterVar="dummy_counter" startValue="j = 0 ; j &#60;= nbrDeDecalage ; j++" stepConst="1" style="FREETEXT" color="ffffff" disabled="0">
 			<qFor>
 				<instruction text="&#34;temp = Bit[0]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
 				<for text="&#34;for i = 0 ; i &#60; 7 ; i++&#34;" comment="" counterVar="dummy_counter" startValue="i = 0 ; i &#60; 7 ; i++" stepConst="1" style="FREETEXT" color="ffffff" disabled="0">
