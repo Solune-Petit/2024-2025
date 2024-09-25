@@ -29,7 +29,7 @@ header>div {
 }
 
 main {
-    width: 1200px;
+    width: 1500px;
     margin: auto;
 }
 
@@ -60,7 +60,9 @@ main {
 
 .ossuaire {
     background-image: url(../img/ossuaire.jpg);
-    width: 1200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
     height: 450px;
     margin: 0 0 10px 0;
     position: relative;
@@ -75,8 +77,7 @@ main {
     width: 360px;
     height: 230px;
     background-color: rgba(29, 26, 22, 0.5);
-    padding: 220px 20px 20px 20px;
-    /* Marges internes */
+    padding: 20px;
 }
 
 .ossuaire .contenu h2 {
@@ -86,4 +87,26 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     /* Majuscules */
+}
+
+.grpLieux{
+    
+}
+
+.zoneRouge{
+    width: 800px;
+    background-color: #B4C2C5;
+    padding: 20px 30px 20px 32px;
+}
+
+.lieux{
+    width: 280px;
+    padding: 20px;
+    border: solid 2px #64696B;
+    border-radius: 10px;
+    color: white;
+}
+
+.lieux p{
+    padding: 10px 0 15px 0;
 }
