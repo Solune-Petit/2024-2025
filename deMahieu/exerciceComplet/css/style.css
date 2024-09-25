@@ -1,0 +1,89 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #3C4347;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #75808C;
+}
+
+header {
+    height: 120px;
+    padding-right: 5px;
+    background-color: #2E3336;
+}
+
+header>img {
+    align-content: flex-start;
+    margin-left: 30px;
+}
+
+header>div {
+    width: 550px;
+    margin-right: 10px;
+    align-content: flex-end;
+}
+
+main {
+    width: 1200px;
+    margin: auto;
+}
+
+.menu {
+    width: 100%;
+    background-color: #41565D;
+    /* Couleur de fond */
+    height: 54px;
+    /* Hauteur de la div */
+    align-items: center;
+    /* Centre les éléments verticalement */
+}
+
+.menu a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-right: 2px solid white;
+    text-transform: uppercase;
+}
+
+.menu a:last-child {
+    border-right: none;
+}
+
+.ossuaire {
+    background-image: url(../img/ossuaire.jpg);
+    width: 1200px;
+    height: 450px;
+    margin: 0 0 10px 0;
+    position: relative;
+    /* Pour positionner le contenu */
+}
+
+.ossuaire .contenu {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 360px;
+    height: 230px;
+    background-color: rgba(29, 26, 22, 0.5);
+    padding: 220px 20px 20px 20px;
+    /* Marges internes */
+}
+
+.ossuaire .contenu h2 {
+    color: #5B909C;
+    /* Couleur du texte */
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Majuscules */
+}
