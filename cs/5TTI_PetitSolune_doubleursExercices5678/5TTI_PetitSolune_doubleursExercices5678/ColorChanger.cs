@@ -53,5 +53,12 @@ namespace _5T24_PetitSolune_enigma
             Console.ForegroundColor = ConsoleColor.DarkCyan;
         }
 
+        public void magenta()
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+        }
+
+        
+
     }
 }
