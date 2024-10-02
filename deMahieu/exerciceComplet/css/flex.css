@@ -29,3 +29,7 @@
 .bloc{
     display: block;
 }
+
+.column{
+    flex-direction: column;
+}

@@ -31,6 +31,7 @@ header>div {
 main {
     width: 1500px;
     margin: auto;
+    gap: 100px;
 }
 
 .menu {
@@ -90,7 +91,7 @@ main {
 }
 
 .grpLieux{
-    
+    gap: 5px;
 }
 
 .zoneRouge{
@@ -109,4 +110,32 @@ main {
 
 .lieux p{
     padding: 10px 0 15px 0;
+    border-bottom: solid white 2px;
+}
+
+.part2_left{
+    width: 250px;
+    padding: 3em 5em 0em 3em;
+}
+
+.part2_left>img{
+    width: 300px;
+    height: min-content;
+}
+
+.grid{
+    width: 950px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+    'grid1 grid2 grid3'
+    'grid4 grid5 grid6'
+    'grid7 grid8 grid9'
+    ;
+    gap: 20px;
+}
+
+.grid img{
+    display: block;
+    width: 100%;
 }
