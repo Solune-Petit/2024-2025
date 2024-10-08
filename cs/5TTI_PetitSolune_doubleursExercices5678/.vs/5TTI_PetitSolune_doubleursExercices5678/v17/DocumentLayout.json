@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5TTI_PetitSolune_doubleursExercices5678\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{135ED46A-9061-41ED-A3D6-F673B5F08C75}|5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5tti_petitsolune_doubleursexercices5678\\5tti_petitsolune_doubleursexercices5678\\fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{135ED46A-9061-41ED-A3D6-F673B5F08C75}|5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678.csproj|solutionrelative:5tti_petitsolune_doubleursexercices5678\\fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{135ED46A-9061-41ED-A3D6-F673B5F08C75}|5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5tti_petitsolune_doubleursexercices5678\\5tti_petitsolune_doubleursexercices5678\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{135ED46A-9061-41ED-A3D6-F673B5F08C75}|5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678.csproj|solutionrelative:5tti_petitsolune_doubleursexercices5678\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{135ED46A-9061-41ED-A3D6-F673B5F08C75}|5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5tti_petitsolune_doubleursexercices5678\\5tti_petitsolune_doubleursexercices5678\\fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{135ED46A-9061-41ED-A3D6-F673B5F08C75}|5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678.csproj|solutionrelative:5tti_petitsolune_doubleursexercices5678\\fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{135ED46A-9061-41ED-A3D6-F673B5F08C75}|5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5tti_petitsolune_doubleursexercices5678\\5tti_petitsolune_doubleursexercices5678\\colorchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,33 +22,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678\\Program.cs",
               "RelativeDocumentMoniker": "5TTI_PetitSolune_doubleursExercices5678\\Program.cs",
               "ToolTip": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678\\Program.cs",
               "RelativeToolTip": "5TTI_PetitSolune_doubleursExercices5678\\Program.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAAAK0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T12:47:01.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Fonctions.cs",
               "DocumentMoniker": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678\\Fonctions.cs",
               "RelativeDocumentMoniker": "5TTI_PetitSolune_doubleursExercices5678\\Fonctions.cs",
               "ToolTip": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\5TTI_PetitSolune_doubleursExercices5678\\5TTI_PetitSolune_doubleursExercices5678\\Fonctions.cs",
               "RelativeToolTip": "5TTI_PetitSolune_doubleursExercices5678\\Fonctions.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAACkAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T12:56:27.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T12:56:27.468Z"
             },
             {
               "$type": "Document",

@@ -1,0 +1,15 @@
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.exe
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.deps.json
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.runtimeconfig.json
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.pdb
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.AssemblyInfoInputs.cache
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.AssemblyInfo.cs
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.csproj.CoreCompileInputs.cache
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.sourcelink.json
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\refint\5TTI_PetitSolune_doubleursExercice9.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.pdb
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.genruntimeconfig.cache
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\ref\5TTI_PetitSolune_doubleursExercice9.dll

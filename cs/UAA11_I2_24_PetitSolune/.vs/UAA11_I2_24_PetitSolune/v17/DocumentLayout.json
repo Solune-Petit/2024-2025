@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\UAA11_I2_24_PetitSolune\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A6B8D3-121A-4BB2-AF51-AB43A3661BF4}|UAA11_I2_24_PetitSolune.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\uaa11_i2_24_petitsolune\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A6B8D3-121A-4BB2-AF51-AB43A3661BF4}|UAA11_I2_24_PetitSolune.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\UAA11_I2_24_PetitSolune\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\UAA11_I2_24_PetitSolune\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAEsAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T12:55:49.76Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

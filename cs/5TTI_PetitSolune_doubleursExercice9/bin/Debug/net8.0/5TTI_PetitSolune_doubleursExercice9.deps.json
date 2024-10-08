@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "5TTI_PetitSolune_doubleursExercice9/1.0.0": {
+        "runtime": {
+          "5TTI_PetitSolune_doubleursExercice9.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "5TTI_PetitSolune_doubleursExercice9/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

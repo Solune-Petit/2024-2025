@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("5TTI_PetitSolune_doubleursExercice9")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("UAA11_I2_24_PetitSolune")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40df60eed3c7e2f5ede0f2ad00bfba6d29ae5efe")]
-[assembly: System.Reflection.AssemblyProductAttribute("5TTI_PetitSolune_doubleursExercice9")]
-[assembly: System.Reflection.AssemblyTitleAttribute("5TTI_PetitSolune_doubleursExercice9")]
+[assembly: System.Reflection.AssemblyProductAttribute("UAA11_I2_24_PetitSolune")]
+[assembly: System.Reflection.AssemblyTitleAttribute("UAA11_I2_24_PetitSolune")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
