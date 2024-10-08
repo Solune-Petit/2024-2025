@@ -16,6 +16,7 @@ namespace _5TTI_PetitSolune_doubleursExercices5678
 
             bool restart = true;
             ConsoleKeyInfo touche;
+            string message = "";
 
             while (restart)
             {
@@ -70,13 +71,12 @@ namespace _5TTI_PetitSolune_doubleursExercices5678
                             nombreOK = true;
                         }
                     }
-                    mesOutils.trouveSiCubique(input, out string message);
 
-                    Console.WriteLine(message );
-                    couleur.darkcyan();
-                    Console.WriteLine("\n\n\npour passer au menu suivant, pressez n'importe quelle touche");
-                    Console.ReadKey();
-                }else if (choix == 2)
+                    Console.Clear();
+                    mesOutils.trouveSiCubique(input, out string output);
+                    message = output;
+                }
+                else if (choix == 2)
                 {
                     int input;
 
@@ -88,14 +88,71 @@ namespace _5TTI_PetitSolune_doubleursExercices5678
                         couleur.white();
 
                     } while ((int.TryParse(Console.ReadLine(), out input) == false) || input > 10000);
+                    Console.Clear();
 
-                    mesOutils.chiffresDiviseurs(input, out string message);
-                    
-                    Console.WriteLine(message);
-                    couleur.darkcyan();
-                    Console.WriteLine("\n\n\npour passer au menu suivant, pressez n'importe quelle touche");
-                    Console.ReadKey();
+                    mesOutils.chiffresDiviseurs(input, out string output);
+                    message = output;
+                    couleur.green();
                 }
+                else if (choix == 3)
+                {
+                    int inputA;
+                    int inputB;
+
+                    do
+                    {
+                        Console.Clear();
+                        couleur.yellow();
+                        Console.WriteLine("saisissez un nombre positif");
+                        couleur.white();
+
+                    } while ((int.TryParse(Console.ReadLine(), out inputA) == false));
+
+                    do
+                    {
+                        Console.Clear();
+                        couleur.yellow();
+                        Console.WriteLine("saisissez un nombre positif et supérieur au nombre précédent");
+                        couleur.white();
+
+                    } while ((int.TryParse(Console.ReadLine(), out inputB) == false) || inputB < inputA);
+                    Console.Clear();
+
+                    mesOutils.nombresParfait(inputA, inputB, out string output);
+                    message = output;
+                    couleur.green();
+                }
+                else if (choix == 4)
+                {
+                    int input;
+
+                    do
+                    {
+                        Console.Clear();
+                        couleur.yellow();
+                        Console.WriteLine("saisissez le nombre de nombres premiers que vous souhaitez avoir");
+                        couleur.white();
+
+                    } while ((int.TryParse(Console.ReadLine(), out input) == false));
+                    Console.Clear();
+
+                    mesOutils.nombresPremiers(input, out int[] output);
+                    couleur.green();
+                    message = "les " + input + " premiers nombres premiers sont :";
+                    for (int i = 0; i < output.Length; i++)
+                    {
+                        message += "[" + output[i] + "]";
+                    }
+                }
+
+
+
+                //affichage de la réponse
+
+                Console.WriteLine(message);
+                couleur.darkcyan();
+                Console.WriteLine("\n\n\npour passer au menu suivant, pressez n'importe quelle touche");
+                Console.ReadKey();
 
 
 

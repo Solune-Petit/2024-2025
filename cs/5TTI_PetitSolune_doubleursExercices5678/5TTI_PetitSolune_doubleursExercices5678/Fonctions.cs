@@ -33,13 +33,13 @@ public class fonctions
 
     public void chiffresDiviseurs(int nombre, out string nombresPossible)
     {
-        nombresPossible = "";
+        nombresPossible = "les diviseurs possibles de ce nombre sont : ";
 
         for (int i = 1; i < 10; i++)
         {
             if ((nombre % i) == 0)
             {
-                nombresPossible += i + " ,";
+                nombresPossible += "[" + i + "]";
             }
         }
     }
@@ -76,6 +76,26 @@ public class fonctions
                 count++;
             }
             nombre++;
+        }
+    }
+
+    public void nombresParfait(int start, int end, out string message)
+    {
+        message = "les nombres parfaits entre " + start + " et " + end + " sont : ";
+        for (int i = start; i <= end; i++)
+        {
+            int testAdd = 0;
+            for (int j = 1; j <= i; j++)
+            {
+                if (i % j == 0 && i != j)
+                {
+                    testAdd += j;
+                }
+            }
+            if (testAdd == i)
+            {
+                message += "[" + i.ToString() + "]";
+            }
         }
     }
 }
