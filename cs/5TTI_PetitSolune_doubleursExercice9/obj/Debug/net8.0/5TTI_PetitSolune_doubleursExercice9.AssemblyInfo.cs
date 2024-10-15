@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("5TTI_PetitSolune_doubleursExercice9")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40df60eed3c7e2f5ede0f2ad00bfba6d29ae5efe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10c688335373dec0cc3b4cc511919ed6234bdaff")]
 [assembly: System.Reflection.AssemblyProductAttribute("5TTI_PetitSolune_doubleursExercice9")]
 [assembly: System.Reflection.AssemblyTitleAttribute("5TTI_PetitSolune_doubleursExercice9")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

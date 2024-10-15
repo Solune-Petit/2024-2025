@@ -21,5 +21,26 @@ namespace _5TTI_PetitSolune_doubleursExercice9
         {
             bit[nombre] = 1;
         }
+
+        public void bitClear(int nombre, ref int[] bit)
+        {
+            bit[nombre] = 0;
+        }
+
+        public void bitChange(int nombre, ref int[] bit)
+        {
+            if (bit[nombre] == 0)
+            {
+                bit[nombre] = 1;
+            }
+            else
+            {
+                bit[nombre] = 0;
+            }
+        }
+        public void setValBit(int place, int valeur, ref int[] bit)
+        {
+            bit[place] = valeur;
+        }
     }
 }
