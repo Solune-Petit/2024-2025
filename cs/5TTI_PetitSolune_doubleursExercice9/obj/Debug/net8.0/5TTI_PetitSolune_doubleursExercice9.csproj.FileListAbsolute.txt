@@ -13,3 +13,10 @@ C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_Peti
 C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.pdb
 C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.genruntimeconfig.cache
 C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\ref\5TTI_PetitSolune_doubleursExercice9.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\Spectre.Console.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\Spectre.Console.Cli.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\de\Spectre.Console.Cli.resources.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\fr\Spectre.Console.Cli.resources.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\bin\Debug\net8.0\sv\Spectre.Console.Cli.resources.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_PetitSolune_doubleursExercice9.csproj.AssemblyReference.cache
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\5TTI_PetitSolune_doubleursExercice9\obj\Debug\net8.0\5TTI_Pet.ED014D1A.Up2Date

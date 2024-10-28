@@ -1,5 +1,6 @@
 ﻿using _5T24_PetitSolune_enigma;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Spectre.Console;
 
 namespace _5TTI_PetitSolune_doubleursExercice9
 {
@@ -8,19 +9,15 @@ namespace _5TTI_PetitSolune_doubleursExercice9
         static void Main(string[] args)
         {
 
+
             ColorChanger couleur = new ColorChanger();
             fonctions mesOutils = new fonctions();
 
-            couleur.blue();
-            Console.WriteLine("Bienvenue dans mon projet sur l'exercice 9 !!!\n\n");
-
 
             bool restart = true;
-            ConsoleKeyInfo touche;
-            string message = "";
             int[] Bite = new int[8];
             int[] previusBite = new int[8];
-            bool problem = true;
+            var table = new Table();
 
             mesOutils.setBit(ref Bite);
 
@@ -33,70 +30,39 @@ namespace _5TTI_PetitSolune_doubleursExercice9
             while (restart)
             {
                 Console.Clear();
-                string choix = "";
-                problem = true;
 
-                for (int i = 0; i < Bite.Length; i++)
-                {
-                    if (Bite[i] != previusBite[i])
-                    {
-                        couleur.red();
-                        Console.Write(Bite[i]);
-                    }
-                    else
-                    {
-                        couleur.white();
-                        Console.Write(Bite[i]);
-                    }
-                }
-
-                while (problem)
-                {
-
-                    couleur.yellow();
-                    Console.WriteLine("\n\n\nque voulez-vous faire ?\n\n");
-                    couleur.cyan();
-                    Console.WriteLine( "0 : revertBite\n\n" +
-                                       "1 : BiteSet\n\n" +
-                                       "2 : BiteClear\n\n" +
-                                       "3 : BiteChange\n\n" +
-                                       "4 : SetValBite\n\n" +
-                                       "5 : DecalageDroite\n\n" +
-                                       "6 : DecalageGauche\n\n" +
-                                       "7 : BiteRang\n\n" +
-                                       "8 : RotateLeft\n\n" +
-                                       "9 : RotateRight\n\n" +
-                                       "Q : quitter le programme");
-                    couleur.white();
-                    touche = Console.ReadKey();
-
-                    // Vérifier si l'entrée est un chiffre entre 1 et 9
-                    if ((touche.KeyChar >= '0' && touche.KeyChar <= '9') || touche.KeyChar == 'q')
-                    {
-                        choix = touche.KeyChar.ToString();
-                        problem = false;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        couleur.red();
-                        Console.WriteLine("\nEntrée invalide. Veuillez entrer un place entre 0 et 9 ou la lettre Q.\n\n\n");
-                    }
-                }
+                var choix = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                    .Title("[yellow]veuillez choisir ce que vous voulez faire[/][grey] enter pour confirmer votre choix [/]")
+                    .PageSize(13)
+                    .AddChoices(new[] {
+                        "view Byte", "redo", "bitSet","bitClear","bitChange","SetValBit","moveRight", "quit"
+                }));
                 Console.Clear();
 
 
 
 
                 //actionnement des fonctions en fonction du choix de l'utilisateur
-                if (choix == "0")
+
+                if (choix == "view Byte")
+                {
+
+                    mesOutils.renderBit(Bite, ref table);
+                    
+                    AnsiConsole.Write(table);
+                    Console.ReadKey();
+                }
+                //test pour savoir si l'utilisateur veux annuler sa dernière action
+                else if (choix == "redo")
                 {
                     for (int i = 0; i < Bite.Length; i++)
                     {
                         Bite[i] = previusBite[i];
                     }
                 }
-                else if (choix == "q")
+                //test pour savoir si l'utilisateur veux quitter le programme
+                else if (choix == "quit")
                 {
                     restart = false;
                 }
@@ -182,10 +148,8 @@ namespace _5TTI_PetitSolune_doubleursExercice9
                     else if (choix == "3")
                     {
                         bool placeOK = false;
-                        bool valeurOK = false;
                         string input = null;
                         int place = 0;
-                        int valeur = 0;
 
                         //demande de la place de modification et vérification de l'entrée utilisateur
                         while (placeOK == false)
@@ -210,11 +174,10 @@ namespace _5TTI_PetitSolune_doubleursExercice9
                                 Console.WriteLine("erreur, vous devez entre un chiffre entre 1 et 8\n\n");
                             }
                             Console.Clear();
-
-                            place--;
-                            mesOutils.bitChange(place, ref Bite);
-
                         }
+                        
+                        place--;
+                        mesOutils.bitChange(place, ref Bite);
                     }
                     //changer un bit en 1 ou 0 en fonction de l'utilisateur dans le byte
                     else if (choix == "4")
@@ -247,7 +210,6 @@ namespace _5TTI_PetitSolune_doubleursExercice9
                                 couleur.red();
                                 Console.WriteLine("erreur, vous devez entre un chiffre entre 1 et 8\n\n");
                             }
-
                         }
                         Console.Clear();
                         //demande de la valeur à modifier et vérification de l'entrée utilisateur
@@ -279,14 +241,44 @@ namespace _5TTI_PetitSolune_doubleursExercice9
                         mesOutils.setValBit(place, valeur, ref Bite);
 
                     }
+                    //décaler de x places vers la droite les bits du byte
                     else if (choix == "5")
                     {
+                        bool inputOK = false;
+                        string input = null;
+                        int nbrDecalage = 0;
 
+                        //demande de la place de modification et vérification de l'entrée utilisateur
+                        while (inputOK == false)
+                        {
+                            couleur.yellow();
+                            Console.WriteLine("à quelle place voulez-vous changer votre Bite?");
+                            couleur.white();
+                            input = Console.ReadLine();
+                            Console.Clear();
+
+                            if (int.TryParse(input, out nbrDecalage))
+                            {
+                                if (nbrDecalage > 0)
+                                {
+                                    inputOK = true;
+                                }
+                            }
+
+                            if (inputOK == false)
+                            {
+                                couleur.red();
+                                Console.WriteLine("erreur, vous devez entre un chiffre entre 1 et 8\n\n");
+                            }
+                        }
+                        Console.Clear();
+
+                        mesOutils.moveRight(nbrDecalage, ref Bite);
                     }
                 }
+                Console.Clear();
             }
             couleur.black();
-            Console.Clear();
         }
     }
 }
