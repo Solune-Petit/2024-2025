@@ -19,26 +19,27 @@ namespace _5TTI_PetitSolune_doubleursExercice9
             }
         }
 
-        public void renderBit(int[] Bite, ref Spectre.Console.Table table)
+        //fabrication du tableau qui contient le bit. (utilisation d'une librairie qui permet d'avoir un affichage esthétique)
+        public void renderBit(int[] Bite, ref Spectre.Console.Table ByteTable)
         {
-            table = new Table();
+            ByteTable = new Table();
 
-            // Add some columns
-            table.AddColumn("place numéro");
-            table.AddColumn(new TableColumn("1").Centered());
-            table.AddColumn(new TableColumn("2").Centered());
-            table.AddColumn(new TableColumn("3").Centered());
-            table.AddColumn(new TableColumn("4").Centered());
-            table.AddColumn(new TableColumn("5").Centered());
-            table.AddColumn(new TableColumn("6").Centered());
-            table.AddColumn(new TableColumn("7").Centered());
-            table.AddColumn(new TableColumn("8").Centered());
+            // ajout des colonnes
+            ByteTable.AddColumn("rang");
+            ByteTable.AddColumn(new TableColumn("7").Centered());
+            ByteTable.AddColumn(new TableColumn("6").Centered());
+            ByteTable.AddColumn(new TableColumn("5").Centered());
+            ByteTable.AddColumn(new TableColumn("4").Centered());
+            ByteTable.AddColumn(new TableColumn("3").Centered());
+            ByteTable.AddColumn(new TableColumn("2").Centered());
+            ByteTable.AddColumn(new TableColumn("1").Centered());
+            ByteTable.AddColumn(new TableColumn("0").Centered());
 
             // Add some rows
-            table.AddRow("valeur bit", Bite[0].ToString(), Bite[1].ToString(), Bite[2].ToString(), Bite[3].ToString(), Bite[4].ToString(), Bite[5].ToString(), Bite[6].ToString(), Bite[7].ToString());
-
-            table.Border(TableBorder.Rounded);
-            table.Expand();
+            ByteTable.AddRow("valeur bit", Bite[0].ToString(), Bite[1].ToString(), Bite[2].ToString(), Bite[3].ToString(), Bite[4].ToString(), Bite[5].ToString(), Bite[6].ToString(), Bite[7].ToString());
+            
+            ByteTable.Border(TableBorder.Rounded);
+            ByteTable.Expand();
         }
 
         //changer un bit en 1 dans le byte
@@ -81,6 +82,50 @@ namespace _5TTI_PetitSolune_doubleursExercice9
                     bit[j] = bit[j - 1];
                 }
                 bit[0] = 0;
+            }
+        }
+
+        public void moveLeft(int nombre, ref int[] bit)
+        {
+            for (int i  = 0; i < nombre; ++i)
+            {
+                for (int j = 0; j < 7; ++j)
+                {
+                    bit[j] = bit[j+1];
+                }
+                bit[7] = 0;
+            }
+        }
+
+        public int BitRang(int position, ref int[] bit)
+        {
+            int val = bit[position];
+            return val;
+        }
+
+        public void ROL(int nbrDeDecalages, ref int[] bit)
+        {
+            for (int j= 0; j <= nbrDeDecalages; j++)
+            {
+                int temp = bit[0];
+                for (int i = 0; i < 7; ++i)
+                {
+                    bit[i] = bit[i + 1];
+                }
+                bit[7] = 0;
+            }
+        }
+
+        public void ROR(int nbrDeDecalages, ref int[] bit)
+        {
+            for (int j= 0; j <= nbrDeDecalages; j++)
+            {
+                int temp = bit[7];
+                for (int i = 7; i >0; i--)
+                {
+                    bit[i] = bit[i-1];
+                }
+                bit[0] = temp;
             }
         }
     }

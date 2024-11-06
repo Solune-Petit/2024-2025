@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "WZMWhJnkz2c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\test_app\\test_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\petit\\.nuget\\packages\\spectre.console\\0.49.1\\spectre.console.0.49.1.nupkg.sha512",
+    "C:\\Users\\petit\\.nuget\\packages\\spectre.console.cli\\0.49.1\\spectre.console.cli.0.49.1.nupkg.sha512"
+  ],
+  "logs": []
+}
