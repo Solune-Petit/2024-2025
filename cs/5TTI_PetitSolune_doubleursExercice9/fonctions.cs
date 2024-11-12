@@ -105,20 +105,20 @@ namespace _5TTI_PetitSolune_doubleursExercice9
 
         public void ROL(int nbrDeDecalages, ref int[] bit)
         {
-            for (int j= 0; j <= nbrDeDecalages; j++)
+            for (int j= 0; j < nbrDeDecalages; j++)
             {
                 int temp = bit[0];
                 for (int i = 0; i < 7; ++i)
                 {
                     bit[i] = bit[i + 1];
                 }
-                bit[7] = 0;
+                bit[7] = temp;
             }
         }
 
         public void ROR(int nbrDeDecalages, ref int[] bit)
         {
-            for (int j= 0; j <= nbrDeDecalages; j++)
+            for (int j= 0; j < nbrDeDecalages; j++)
             {
                 int temp = bit[7];
                 for (int i = 7; i >0; i--)

@@ -39,7 +39,7 @@ namespace _5TTI_PetitSolune_doubleursExercice9
                     .Title("\n\n\n[yellow]veuillez choisir ce que vous voulez faire[/][grey] enter pour confirmer votre choix [/]")
                     .PageSize(13)
                     .AddChoices(new[] {
-                        "redo", "bitSet","bitClear","bitChange","SetValBit","moveRight", "moveLeft", "bitRang", "ROL", "quit"
+                        "redo", "bitSet","bitClear","bitChange","SetValBit","moveRight", "moveLeft", "bitRang", "ROL", "ROR", "quit"
                 }));
                 Console.Clear();
 
@@ -388,6 +388,41 @@ namespace _5TTI_PetitSolune_doubleursExercice9
                         Console.Clear();
 
                         mesOutils.ROL(nbrDecalage, ref Bite);
+                    }
+                    else if (choix == "ROR")
+                    {
+                        bool inputOK = false;
+                        string input = null;
+                        int nbrDecalage = 0;
+
+                        //demande de la place de modification et vérification de l'entrée utilisateur
+                        while (inputOK == false)
+                        {
+                            Console.Clear();
+                            AnsiConsole.Write(ByteTable);
+                            couleur.yellow();
+                            Console.WriteLine("de combien de rang voulez vous faire tourner votre byte ?");
+                            couleur.white();
+                            input = Console.ReadLine();
+                            Console.Clear();
+
+                            if (int.TryParse(input, out nbrDecalage))
+                            {
+                                if (nbrDecalage > 0)
+                                {
+                                    inputOK = true;
+                                }
+                            }
+
+                            if (inputOK == false)
+                            {
+                                couleur.red();
+                                Console.WriteLine("erreur, vous devez entre un chiffre entre 1 et 8\n\n");
+                            }
+                        }
+                        Console.Clear();
+
+                        mesOutils.ROR(nbrDecalage, ref Bite);
                     }
                 }
                 Console.Clear();
