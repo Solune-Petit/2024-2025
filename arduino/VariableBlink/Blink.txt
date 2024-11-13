@@ -1,1 +1,3 @@
-Turn an LED on and off. 
+Turn an LED on and off at a variable rate depending of the user inputs trough a potentiometer
+
+link to the tinkercad : https://www.tinkercad.com/things/hoAHyt3n4Iv-variable-blink?sharecode=jo3vZwNFh_kuW00_RiNH5WBoqai7kPDcgzUJTLyKnmE
