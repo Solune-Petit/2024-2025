@@ -1,10 +1,9 @@
 <div class="flexible space-evenly header">
-    <button class="menu">Menu</button>
+    <button class="menu"><a href="game">game</a></button>
     <?php if(isset($_SESSION["user"])):?>
-        <button class="menu">Your profile</button>
-        <button class="menu">Log Off</button>
+        <button class="menu"><a href="Profile">Your profile</a></button>
+        <button class="menu"><a href="LogOf">Log Off</a></button>
     <?php else:?>
-        <button class="menu">Log In</button>
-        <button class="menu">Sign In</button>
+        <button class="menu"><a href="/LogIn">Log In</a></button>
     <?php endif?>
 </div>

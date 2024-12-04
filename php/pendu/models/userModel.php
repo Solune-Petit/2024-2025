@@ -11,21 +11,14 @@ function createUser($pdo)
 {
     try {
     //définition de la requête d'insertion en utilisant la notion de paramètre
-    $query = 'insert into utilisateurs (nomUser, prenomUser, loginUser, passWordUser, emailUser, role, adresseUser, villeUser, CPUser)
-    values (:nomUser, :prenomUser, :loginUser, :passWordUser, :emailUser, :role, :adresseUser, :villeUser, :CPUser)';
+    $query = "INSERT INTO `user` (`userName`, `userPassword`, `userEmail`) VALUES (:userName, :userPassword, :userEmail)";
     //préparation de la requête
     $ajouteUser = $pdo->prepare($query);
     //exécution en attribuant les valeurs récupérées dans le formulaire aux paramètres
     $ajouteUser->execute([
-        'nomUser' => $_POST["nom"],
-        'prenomUser' => $_POST["prenom"],
-        'loginUser' => $_POST["login"],
-        'passWordUser' => $_POST["mot_de_passe"],
-        'emailUser' => $_POST["email"],
-        'role' => 'user',
-        'adresseUser' => $_POST["adresse"],
-        'villeUser' => $_POST["ville"],
-        'CPUser' => $_POST["CP"]
+        'userName' => $_POST["login"],
+        'userPassword' => $_POST["mot_de_passe"],
+        'userEmail' => $_POST["email"],
     ]);
     }catch (PDOEXCEPTION $e) {
         $message = $e->getMessage();

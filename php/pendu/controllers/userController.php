@@ -4,22 +4,7 @@ require_once("Models/userModel.php");
 
 $uri = $_SERVER["REQUEST_URI"];
 
-if ($uri == "/inscriptionOrEditProfil") {
-
-    if (isset($_POST['btnEnvoi']))
-    {
-        createUser($pdo);
-        header('location:/');
-
-        connectUser($pdo);
-    }
-
-    $title = "inscription chocolaterie astronautic";
-    $template = "Views/Users/inscriptionOrEditProfil.php";
-    require_once("Views/base.php");
-
-    
-} else if ($uri == "/connexion") {
+if ($uri == "/LogIn") {
     // if (isset($_POST['btnEnvoi'])) {
     //     try {
     //         //définition de la requête select en utilisant la notion de paramètre
@@ -36,15 +21,19 @@ if ($uri == "/inscriptionOrEditProfil") {
     //     }
     // }
     
-    if (isset($_POST['btnEnvoi'])) {
+    if (isset($_POST['loginBtn'])) {
         //ajout de l'utilisateur à la base de données
         if (connectUser($pdo)) {
             header('location:/index.php');
         }
+    }else if (isset($_POST['registerBtn'])) {
+        if (createUser($pdo)) {
+            header('location:/');
+        }
     }
 
     $title = "connexion";
-    $template = "Views/Users/connexion.php";
+    $template = "Views/Users/Connexion.php";
     require_once("Views/base.php");
 
 
@@ -52,22 +41,4 @@ if ($uri == "/inscriptionOrEditProfil") {
 
     session_destroy();
     header("location:/");
-
-
-} else if ($uri == "/updateProfile"){
-    $title = "modifier profil";
-    $template = "Views/Users/inscriptionOrEditProfil.php";
-    require_once("Views/base.php");
-
-
-} else if ($uri == "/deleteProfile"){
-    
-    deleteProfile($pdo);
-    header("location:/");
-
-
-}else if ($uri == "/orders"){
-    $title = "Vos commandes";
-    $template = "Views/Users/orders.php";
-    require_once("Views/base.php");
 }

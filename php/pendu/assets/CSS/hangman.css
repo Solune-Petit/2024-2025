@@ -1,0 +1,14 @@
+.hangman {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.guessed {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.attempts {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
