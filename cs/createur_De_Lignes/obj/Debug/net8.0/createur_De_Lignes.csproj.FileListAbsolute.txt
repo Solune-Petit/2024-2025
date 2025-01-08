@@ -1,0 +1,15 @@
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\bin\Debug\net8.0\createur_De_Lignes.exe
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\bin\Debug\net8.0\createur_De_Lignes.deps.json
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\bin\Debug\net8.0\createur_De_Lignes.runtimeconfig.json
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\bin\Debug\net8.0\createur_De_Lignes.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\bin\Debug\net8.0\createur_De_Lignes.pdb
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.AssemblyInfoInputs.cache
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.AssemblyInfo.cs
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.csproj.CoreCompileInputs.cache
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.sourcelink.json
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\refint\createur_De_Lignes.dll
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.pdb
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\createur_De_Lignes.genruntimeconfig.cache
+C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\cs\createur_De_Lignes\obj\Debug\net8.0\ref\createur_De_Lignes.dll

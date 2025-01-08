@@ -24,7 +24,7 @@ if ($uri == "/LogIn") {
     if (isset($_POST['loginBtn'])) {
         //ajout de l'utilisateur à la base de données
         if (connectUser($pdo)) {
-            header('location:/index.php');
+            header('location:/');
         }
     }else if (isset($_POST['registerBtn'])) {
         if (createUser($pdo)) {

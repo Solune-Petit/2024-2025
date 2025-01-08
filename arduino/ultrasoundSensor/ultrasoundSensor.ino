@@ -1,16 +1,16 @@
 long duree, distance;
 
 void setup() {
-  pinMode(4, INPUT);
-  pinMode(2, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(2, INPUT);
   Serial.begin(9600);
 }
 
 void loop() {
   digitalWrite(4, LOW);
-  delayMicroseconds(2);
+  delayMicroseconds(1);
   digitalWrite(4, HIGH);
-  delayMicroseconds(2);
+  delayMicroseconds(1);
   digitalWrite(4, LOW);
   
   duree = pulseIn(2, HIGH);
@@ -19,5 +19,5 @@ void loop() {
   Serial.print("La distance est : ");
   Serial.print(distance);
   Serial.println(" cm");
-  delay(1000);
+  delay(1);
 }

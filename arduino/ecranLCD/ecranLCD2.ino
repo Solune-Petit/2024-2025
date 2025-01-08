@@ -2,14 +2,12 @@
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);    //déclaration de la variable lcd de type afficheur branché aux pins indiqués
 int I;
 
-void setup()
-{
+void setup2(){
   I=3;
   lcd.begin(16,2);
 }
 
-void loop()
-{
+void loop2(){
   lcd.clear();
   I=3;
   while(I>0)

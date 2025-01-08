@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "createur_De_Lignes/1.0.0": {
+        "runtime": {
+          "createur_De_Lignes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "createur_De_Lignes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

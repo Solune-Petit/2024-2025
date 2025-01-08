@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\selecteurAleatoir\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7775FF79-BDC8-4D66-A4D5-57E95BEC958E}|selecteurAleatoir.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\selecteuraleatoir\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7775FF79-BDC8-4D66-A4D5-57E95BEC958E}|selecteurAleatoir.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7775FF79-BDC8-4D66-A4D5-57E95BEC958E}|selecteurAleatoir.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\selecteuraleatoir\\fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7775FF79-BDC8-4D66-A4D5-57E95BEC958E}|selecteurAleatoir.csproj|solutionrelative:fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\selecteurAleatoir\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\selecteurAleatoir\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAB4AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T11:50:33.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Fonctions.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\selecteurAleatoir\\Fonctions.cs",
+              "RelativeDocumentMoniker": "Fonctions.cs",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\cs\\selecteurAleatoir\\Fonctions.cs",
+              "RelativeToolTip": "Fonctions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T12:17:13.742Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
