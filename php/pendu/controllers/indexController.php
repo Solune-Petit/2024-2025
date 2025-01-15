@@ -5,6 +5,28 @@ require_once("./models/gameModel.php");
 
 $uri = $_SERVER["REQUEST_URI"];
 
+$letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+$WON = true;
+// temp variables for testing
+
+$guess = "HANGMAN";
+$maxLetters = strlen($guess) - 1;
+$responses = ["H","G","A"];
+
+
+// Live variables here
+
+
+// ALl the body parts
+$bodyParts = ["nohead","head","body","hand","hands","leg","legs"];
+
+
+// Random words for the game and you to guess
+$words = [
+   "HANGMAN", "BUTTERFLY" , "APPLE", "INSIDIOUSLY", "DUPLICATE",
+    "CASUALTY", "GLOOMFUL"
+];
+
 
 if ($uri == "/index.php" || $uri === "/pageAcceuil" || $uri == "/" || $uri == "/game") {
     

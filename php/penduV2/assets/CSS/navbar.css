@@ -1,0 +1,11 @@
+header
+{
+    width: 100%;
+    background-color: aquamarine;
+    border: 2px solid black;
+}
+
+.menu{
+    border-radius: 50px;
+    font-size: 30px;
+}

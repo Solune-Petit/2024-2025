@@ -1,10 +1,3 @@
-<?php
-/* @route http://dev.wfprojects.com/hangman/game.php */
-require_once("./models/gameModel.php");
-require_once("./config/connectDataBase.php");
-?>
-
-
 <!-- Main app display -->
 <div style="margin: 0 auto; background: #dddddd; width:900px; height:900px; padding:5px; border-radius:3px;">
 
@@ -13,12 +6,12 @@ require_once("./config/connectDataBase.php");
         <img style="width:80%; display:inline-block;" src="<?php echo getCurrentPicture(getCurrentPart()); ?>" />
 
         <!-- Indicate game status -->
-        <?Php if (gameComplete()): ?>
+        <?php if (gameComplete()): ?>
             <h1>GAME COMPLETE</h1>
         <?php endif; ?>
-        <?php if ($WON  && gameComplete()): ?>
+        <?php if ($WON == true  && gameComplete()): ?>
             <p style="color: darkgreen; font-size: 25px;">You Won! HURRAY! :)</p>
-        <?php elseif (!$WON  && gameComplete()): ?>
+        <?php elseif ($WON == false  && gameComplete()): ?>
             <p style="color: darkred; font-size: 25px;">You LOST! OH NO! :(</p>
             <p>the word was <?= $_SESSION["word"] ?></p>
             <?=var_dump($WON);?>

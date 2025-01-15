@@ -1,0 +1,12 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
+}

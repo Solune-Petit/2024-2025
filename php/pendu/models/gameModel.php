@@ -8,28 +8,6 @@ function getWordFromDB($pdo){
     return $word->listeMots;
 }
 
-$letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-$WON = false;
-
-// temp variables for testing
-
-$guess = "HANGMAN";
-$maxLetters = strlen($guess) - 1;
-$responses = ["H","G","A"];
-
-
-// Live variables here
-
-
-// ALl the body parts
-$bodyParts = ["nohead","head","body","hand","hands","leg","legs"];
-
-
-// Random words for the game and you to guess
-$words = [
-   "HANGMAN", "BUTTERFLY" , "APPLE", "INSIDIOUSLY", "DUPLICATE",
-    "CASUALTY", "GLOOMFUL"
-];
 
 
 function getCurrentPicture($part){
@@ -46,7 +24,7 @@ function startGame(){
 function restartGame(){
     session_destroy();
     session_start();
-
+    $WON = false;
 }
 
 // Get all the hangman Parts
@@ -168,7 +146,8 @@ if(isset($_GET['kp'])){
         
         addResponse($currentPressedKey);
         if(isWordCorrect()){
-            $WON = true; // game complete
+            var_dump("<h1>fdjkqsmfdakjqsm</h1>");
+            $WON = true;
             markGameAsComplete();
         }
     }else{
@@ -182,6 +161,5 @@ if(isset($_GET['kp'])){
             markGameAsComplete(); // lost condition
         }
     }
-    var_dump("<h1>fdjkqsmfdakjqsm</h1>");
-    header("location:game");
+    // header("location:game");
 }
