@@ -18,8 +18,10 @@ void loop()
   delay(1000);
   for (pos = 180; pos >= 0; pos -= 1) {     // crée une boucle qui va aller de pos=180 jusqu'à pos=0 en diminuant pos de 1 à chaque tour
   MonServo.write(pos);                      //indique au servo de se rendre à la position pos (qui vaut 180, puis 179, puis 178 etc..jusqu'à 0)
-  delay(1000);                                //on attend 15 millisecondes
+  delay(500);                                //on attend 15 millisecondes
   }
+
+  // MonServo.write(pos);
 }
 
 //faire en sorte de compter le nombre de fois que ça fait une boucle et puis afficher sur un écran LCD

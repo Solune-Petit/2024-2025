@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/CSS/navbar.css">
     <link rel="stylesheet" href="../assets/CSS/flex.css">
-    <link rel="stylesheet" href="../assets/CSS/index.css">
+    <link rel="stylesheet" href="../assets/CSS/game.css">
     <link rel="stylesheet" href="../assets/CSS/Connexion.css">
     <title>hangman game</title>
 </head>

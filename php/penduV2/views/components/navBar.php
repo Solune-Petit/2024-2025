@@ -1,9 +1,10 @@
-<div class="flexible space-evenly header">
-    <button class="menu"><a href="game">game</a></button>
-    <?php if(isset($_SESSION["user"])):?>
-        <button class="menu"><a href="Profile">Your profile</a></button>
-        <button class="menu"><a href="LogOf">Log Off</a></button>
+<div class="flexible space-evenly align-item-center menu">
+    <a href="game" class="menuBtn">game</a>
+    <?php if(isset($_SESSION["user"]->userStatus) == "user" || isset($_SESSION["user"]->userStatus) == "admin"):?>
+        <a href="Profile" class="menuBtn">Your profile</a>
+        <a href="LogOf" class="menuBtn">Log Off</a>
     <?php else:?>
-        <button class="menu"><a href="/LogIn">Log In</a></button>
+        <a href="/LogIn" class="menuBtn">Log In</a>
     <?php endif?>
 </div>
+

@@ -6,6 +6,22 @@ header
 }
 
 .menu{
-    border-radius: 50px;
+    height: 130px;
+}
+
+.menuBtn{
+    background-color: blueviolet;
+    width: 150px;
+    border-radius: 50%;
     font-size: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menuBtn:hover{
+    background-color: darkblue;
+    color: white;
 }

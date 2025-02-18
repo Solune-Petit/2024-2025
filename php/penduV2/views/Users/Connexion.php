@@ -6,31 +6,31 @@
         <?php endif; ?>
 
         <!-- Login Form -->
-        <form id="loginForm" action="connexion" method="post">
+        <form id="loginForm" action="" method="post">
             <div class="input-group">
                 <label for="loginUsername">Username</label>
-                <input type="text" id="loginUsername" name="login" required>
+                <input type="text" id="loginUsername" name="loginUsername" required>
             </div>
             <div class="input-group">
                 <label for="loginPassword">Password</label>
-                <input type="password" id="loginPassword" name="mot_de_passe" required>
+                <input type="password" id="loginPassword" name="loginPassword" required>
             </div>
             <button type="submit" name="loginBtn" class="btn">Login</button>
         </form>
 
         <!-- Registration Form (initially hidden) -->
-        <form id="registerForm" action="inscriptionOrEditProfil" method="post" style="display: none;">
+        <form id="registerForm" action="" method="post" style="display: none;">
             <div class="input-group">
                 <label for="registerUsername">Username</label>
-                <input type="text" id="registerUsername" name="login" required>
+                <input type="text" id="registerUsername" name="registerUsername" required>
             </div>
             <div class="input-group">
                 <label for="registerPassword">Password</label>
-                <input type="password" id="registerPassword" name="mot_de_passe" required>
+                <input type="password" id="registerPassword" name="registerPassword" required>
             </div>
             <div class="input-group">
                 <label for="registerEmail">Email</label>
-                <input type="email" id="registerEmail" name="email" required>
+                <input type="email" id="registerEmail" name="registerEmail" required>
             </div>
             <button type="submit" name="registerBtn" class="btn">Register</button>
         </form>

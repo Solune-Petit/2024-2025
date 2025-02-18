@@ -1,0 +1,12 @@
+header{
+    height: 70px;
+    background-color: rgb(121, 5, 175);
+    border: solid 2px black;
+    border-radius: 10px;
+    font-size: 40px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
