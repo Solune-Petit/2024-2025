@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("5T24_PetitSolune_BlackJack")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+935da2e0eb6a46cf1e3d19b7bc689eb4c2cc86af")]
 [assembly: System.Reflection.AssemblyProductAttribute("5T24_PetitSolune_BlackJack")]

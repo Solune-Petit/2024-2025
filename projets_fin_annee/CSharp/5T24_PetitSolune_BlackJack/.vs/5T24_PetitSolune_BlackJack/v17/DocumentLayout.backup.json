@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\code\\5T24_PetitSolune_BlackJack\\",
+  "WorkspaceRootPath": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\projets_fin_annee\\CSharp\\5T24_PetitSolune_BlackJack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8ADD277-9D0D-4AE2-9134-39B984363611}|5T24_PetitSolune_BlackJack.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\code\\5t24_petitsolune_blackjack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8ADD277-9D0D-4AE2-9134-39B984363611}|5T24_PetitSolune_BlackJack.csproj|c:\\users\\petit\\desktop\\nouveau dossier\\ecole\\2024-2025\\informatique\\projets_fin_annee\\csharp\\5t24_petitsolune_blackjack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8ADD277-9D0D-4AE2-9134-39B984363611}|5T24_PetitSolune_BlackJack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\code\\5T24_PetitSolune_BlackJack\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\projets_fin_annee\\CSharp\\5T24_PetitSolune_BlackJack\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\code\\5T24_PetitSolune_BlackJack\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\Nouveau dossier\\ecole\\2024-2025\\informatique\\projets_fin_annee\\CSharp\\5T24_PetitSolune_BlackJack\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T12:14:58.817Z",
               "EditorCaption": ""
