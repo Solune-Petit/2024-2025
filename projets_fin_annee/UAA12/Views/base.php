@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="Assets\CSS\header.css">
     <link rel="stylesheet" href="Assets\CSS\base.css">
     <link rel="stylesheet" href="Assets\CSS\connexion.css">
+    <link rel="stylesheet" href="Assets\CSS\acceuilDemo.css">
 </head>
 <body>
-    <header class="flexible justify-content-end align-item-center">
+    <header class="flexible space-between align-item-center">
         <?php require_once("Views/components/header.php") ?>
     </header>
     <main>

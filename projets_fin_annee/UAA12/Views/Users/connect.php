@@ -10,7 +10,7 @@ var_dump($_SESSION["user"]);
         <?php endif; ?>
 
         <!-- Login Form -->
-        <form id="loginForm" action="connexion" method="post">
+        <form id="loginForm" action="" method="post">
             <div class="input-group">
                 <label for="loginUsername">Username</label>
                 <input type="text" id="loginUsername" name="login" required>

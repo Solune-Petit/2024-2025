@@ -6,3 +6,10 @@ body{
 main{
     /* fdsq */
 }
+
+footer{
+    background-color: rgb(121, 5, 175);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

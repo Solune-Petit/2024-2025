@@ -13,3 +13,18 @@ C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\projets_fin_
 C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.pdb
 C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.genruntimeconfig.cache
 C:\Users\petit\Desktop\Nouveau dossier\ecole\2024-2025\informatique\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\ref\5T24_PetitSolune_BlackJack.dll
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\bin\Debug\net8.0\5T24_PetitSolune_BlackJack.exe
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\bin\Debug\net8.0\5T24_PetitSolune_BlackJack.deps.json
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\bin\Debug\net8.0\5T24_PetitSolune_BlackJack.runtimeconfig.json
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\bin\Debug\net8.0\5T24_PetitSolune_BlackJack.dll
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\bin\Debug\net8.0\5T24_PetitSolune_BlackJack.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.AssemblyInfoInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.AssemblyInfo.cs
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.sourcelink.json
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.dll
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\refint\5T24_PetitSolune_BlackJack.dll
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\5T24_PetitSolune_BlackJack.genruntimeconfig.cache
+C:\Users\petit\Desktop\ecole\2024-2025\projets_fin_annee\CSharp\5T24_PetitSolune_BlackJack\obj\Debug\net8.0\ref\5T24_PetitSolune_BlackJack.dll

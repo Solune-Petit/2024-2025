@@ -1,8 +1,9 @@
 <?php
+// En cas d'erreur, on affiche le message de l'erreur attrapée
 
 try {
-    $strConnexion = "mysql:host=localhost;dbname=UAA12";
-    $pdo = new PDO($strConnexion, "root", "root", [
+    $strConnexion = "mysql:host=localhost;dbname=finalprodjectuaa12";
+    $pdo = new PDO($strConnexion, "root", "Vitesse12", [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
     ]);
