@@ -1,6 +1,5 @@
 ﻿namespace _5T24_PetitSolune_BlackJack
 {
-    using Function; // Utilise le namespace Function
 
     namespace _5T24_PetitSolune_BlackJack
     {
