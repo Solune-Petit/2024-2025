@@ -72,5 +72,18 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 300px;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
+.switch{
+    margin-top: 40px;
+    padding: 0 30px;
+    border: solid black;
+    border-radius: 50px;
+    background-color: rgb(0, 183, 255);
+    color: white;
+}

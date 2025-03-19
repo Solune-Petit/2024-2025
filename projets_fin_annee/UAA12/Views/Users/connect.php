@@ -1,9 +1,6 @@
-<?php
-var_dump($_SESSION["user"]);
-?>
-
 <div class="center-wrapper">
     <div class="form-container">
+        <div>
         <h2 id="formTitle">Login</h2>
         <?php if (isset($error)): ?>
             <p class="error"><?php echo $error; ?></p>
@@ -13,35 +10,45 @@ var_dump($_SESSION["user"]);
         <form id="loginForm" action="" method="post">
             <div class="input-group">
                 <label for="loginUsername">Username</label>
-                <input type="text" id="loginUsername" name="login" required>
+                <input type="text" id="loginUsername" name="loginUsername" required>
             </div>
             <div class="input-group">
                 <label for="loginPassword">Password</label>
-                <input type="password" id="loginPassword" name="mot_de_passe" required>
+                <input type="password" id="loginPassword" name="loginPassword" required>
             </div>
             <button type="submit" name="loginBtn" class="btn">Login</button>
         </form>
 
         <!-- Registration Form (initially hidden) -->
-        <form id="registerForm" action="inscriptionOrEditProfil" method="post" style="display: none;">
+        <form id="registerForm" action="" method="post" style="display: none;">
             <div class="input-group">
-                <label for="registerUsername">Username</label>
-                <input type="text" id="registerUsername" name="login" required>
+                <label for="registerName">name</label>
+                <input type="text" id="registerName" name="registerName" required>
             </div>
             <div class="input-group">
-                <label for="registerPassword">Password</label>
-                <input type="password" id="registerPassword" name="mot_de_passe" required>
+                <label for="registerSurname">Surname</label>
+                <input type="text" id="registerSurname" name="registerSurname" required>
             </div>
             <div class="input-group">
                 <label for="registerEmail">Email</label>
-                <input type="email" id="registerEmail" name="email" required>
+                <input type="email" id="registerEmail" name="registerEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="registerLogin">login</label>
+                <input type="text" id="registerLogin" name="registerLogin" required>
+            </div>
+            <div class="input-group">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="registerPassword" required>
             </div>
             <button type="submit" name="registerBtn" class="btn">Register</button>
         </form>
+        </div>
 
-        <p id="switchText">
-            Pas encore inscrit ? <a href="#" id="switchForm">Inscrivez-vous ici</a>
-        </p>
+        <div class="switch">
+            <p id="switchText">Pas encore inscrit ?</p>
+            <a href="#" id="switchForm"><p>Inscrivez-vous ici</p></a>
+        </div>
     </div>
 </div>
 

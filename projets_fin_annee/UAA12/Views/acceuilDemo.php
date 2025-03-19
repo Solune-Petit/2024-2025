@@ -3,7 +3,7 @@
 </div>
 <div class="demoCube flexible align-item-center">
     <!-- image temporaire qui montre le site. le site étant pas encore fait, je met juste un dessin de ce à quoi il est supposé ressembler -->
-    <img src="notes/acceuil co.png" alt="image montrant le site">
+    <img src="Assets/img/acceuil co.png" alt="image montrant le site">
     <div class="demoCubeText">
         <h2>Qu'est-ce que Chrono Work ?</h2>
         <p>Chrono Work est un outil de gestion de projets en ligne qui vous aide à organiser vos tâches et à collaborer avec d'autres personnes. 
@@ -25,5 +25,5 @@
             outil simple et efficace pour gérer vos projets, qu'ils soient personnels ou professionnels.</p>
     </div>
     <!-- image temporaire qui montre le site. le site étant pas encore fait, je met juste un dessin de ce à quoi il est supposé ressembler -->
-    <img src="notes/page projet.png" alt="image montrant le site">
+    <img src="Assets/img/page projet.png" alt="image montrant le site">
 </div>

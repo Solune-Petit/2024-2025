@@ -7,6 +7,11 @@ main{
     /* fdsq */
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 footer{
     background-color: rgb(121, 5, 175);
     color: white;

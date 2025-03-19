@@ -1,11 +1,33 @@
 <?php
 
-function createUser($PDO){
+function createUser($pdo){
     try
     {
-        $query = "INSERT INTO ";
-    }catch(PDOException){
+        $query = "INSERT INTO user(UserNom, UserPrenom, UserMail, UserPassword, UserLogin) VALUES (:UserNom, :UserPrenom, :UserMail, :UserPassword, :UserLogin)";
+        $connection = $pdo->prepare($query);
+        $connection->execute([
+            'UserNom' => $_POST["registerName"],
+            'UserPrenom' => $_POST['registerSurname'],
+            'UserMail' => $_POST['registerEmail'],
+            'UserPassword' => $_POST['registerPassword'],
+            'UserLogin' => $_POST['registerLogin'],
+        ]);
 
+        $query = "SELECT * FROM user where UserLogin = :loginUsername and UserPassword = :loginPassword";
+        $connection = $pdo->prepare($query);
+        $connection->execute([
+            'loginUsername' => $_POST['registerLogin'],
+            'loginPassword' => $_POST['registerPassword'],
+        ]);
+        $user = $connection->fetch();
+        
+        $_SESSION["user"] = $user;
+
+        return true;
+
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
     }
 }
 
@@ -28,4 +50,10 @@ function connectUser($pdo){
         $message = $e->getMessage();
         die($message);
     }
+}
+
+
+function logOutUser($pdo){
+    session_destroy();
+    header("Location:/");
 }
