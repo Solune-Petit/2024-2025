@@ -1,0 +1,15 @@
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\bin\Debug\net8.0\manip_matrice.exe
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\bin\Debug\net8.0\manip_matrice.deps.json
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\bin\Debug\net8.0\manip_matrice.runtimeconfig.json
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\bin\Debug\net8.0\manip_matrice.dll
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\bin\Debug\net8.0\manip_matrice.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.AssemblyInfoInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.AssemblyInfo.cs
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.csproj.CoreCompileInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.sourcelink.json
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.dll
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\refint\manip_matrice.dll
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\manip_matrice.genruntimeconfig.cache
+C:\Users\petit\Desktop\ecole\2024-2025\cs\manip_matrice\manip_matrice\obj\Debug\net8.0\ref\manip_matrice.dll

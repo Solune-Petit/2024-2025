@@ -1,0 +1,55 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\manip_matrice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D074E0F-EC3E-45A0-808D-5DE9B1C29289}|manip_matrice\\manip_matrice.csproj|c:\\users\\petit\\desktop\\ecole\\2024-2025\\cs\\manip_matrice\\manip_matrice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D074E0F-EC3E-45A0-808D-5DE9B1C29289}|manip_matrice\\manip_matrice.csproj|solutionrelative:manip_matrice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D074E0F-EC3E-45A0-808D-5DE9B1C29289}|manip_matrice\\manip_matrice.csproj|c:\\users\\petit\\desktop\\ecole\\2024-2025\\cs\\manip_matrice\\manip_matrice\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D074E0F-EC3E-45A0-808D-5DE9B1C29289}|manip_matrice\\manip_matrice.csproj|solutionrelative:manip_matrice\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\manip_matrice\\manip_matrice\\Program.cs",
+              "RelativeDocumentMoniker": "manip_matrice\\Program.cs",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\manip_matrice\\manip_matrice\\Program.cs",
+              "RelativeToolTip": "manip_matrice\\Program.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAgwB8BAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T11:45:24.183Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Function.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\manip_matrice\\manip_matrice\\Function.cs",
+              "RelativeDocumentMoniker": "manip_matrice\\Function.cs",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\manip_matrice\\manip_matrice\\Function.cs",
+              "RelativeToolTip": "manip_matrice\\Function.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwDoAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:06:53.815Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

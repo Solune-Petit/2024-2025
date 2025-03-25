@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "manip_matrice/1.0.0": {
+        "runtime": {
+          "manip_matrice.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "manip_matrice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
