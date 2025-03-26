@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="Assets\CSS\base.css">
     <link rel="stylesheet" href="Assets\CSS\connexion.css">
     <link rel="stylesheet" href="Assets\CSS\acceuilDemo.css">
+    <link rel="stylesheet" href="Assets\CSS\projectNav.css">
 </head>
 <body>
     <header class="flexible space-between align-item-center">
         <?php require_once("Views/components/header.php") ?>
     </header>
-    <main>
-        <?php require_once($template) ?>
+    <main class="flexible">
+        <?php 
+            require_once("Views\components\projectNav.php");
+            require_once($template) ?>
     </main>
     <footer>
         <?php require_once("Views/components/footer.php") ?>

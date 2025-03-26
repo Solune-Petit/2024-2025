@@ -101,7 +101,7 @@
                 else
                 {
                     ////////le jeu en lui même
-                    
+
                     //////assignation des variables
                     //bool
                     bool restart = true;                //permet de recommencer une partie
@@ -114,7 +114,7 @@
                     int[] handPlayer = new int[11];     //main du joueur
 
                     //string
-                    string temp;                        //entrée temporaire pour vérif entrées
+                    string temp = "";                        //entrée temporaire pour vérif entrées
 
 
                     //demande l'argent du joueur
@@ -125,60 +125,28 @@
                         Console.Clear();
                     } while (!int.TryParse(temp, out playerMoney));
 
-                    foreach(int i in handPlayer)
+                    while (true)
                     {
-                        Console.WriteLine("quelle carte en position " + i + "? (encore " + (handPlayer.Length - i) + " cases à remplir restante");
-                        handPlayer[i] = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                    }
-                    
+                        string[][] test = new string[11][];
 
-                    do
-                    {
-                        // Tableau de cartes à taille variable
-                        List<Card> cardsToDisplay = new List<Card>();
-
-                        for (int i = 0; i < handPlayer.Length; i++)
+                        for (int i = 0; i < 11; i++)
                         {
-                            cardsToDisplay.Add(temp); // Exemple : ajoute la première carte du deck
+                            temp = Console.ReadLine();
+                            test[i] = Deck.Cards[int.Parse(temp)].Image.Split("\r\n");
                         }
 
-                        // Trouver la largeur maximale de chaque carte
-                        int maxWidth = 0;
-                        foreach (Card card in cardsToDisplay)
+                        for (int j = 0; j < 7; j++)
                         {
-                            string[] cardLines = card.Image.Split(new[] { "\r\n" }, StringSplitOptions.None);
-                            foreach (string line in cardLines)
+                            for (int i = 0; i < test.Length; i++)
                             {
-                                if (line.Length > maxWidth)
-                                {
-                                    maxWidth = line.Length;
-                                }
+                                Console.Write(test[i][j] + " ");
                             }
+                            Console.Write("\n");
                         }
-
-                        // Afficher les cartes alignées
-                        for (int i = 0; i < cardsToDisplay[0].Image.Split(new[] { "\r\n" }, StringSplitOptions.None).Length; i++)
-                        {
-                            for (int j = 0; j < cardsToDisplay.Count; j++)
-                            {
-                                string[] cardLines = cardsToDisplay[j].Image.Split(new[] { "\r\n" }, StringSplitOptions.None);
-                                if (i < cardLines.Length)
-                                {
-                                    Console.Write(cardLines[i].PadRight(maxWidth)); // Ajouter des espaces pour l'alignement
-                                }
-                                else
-                                {
-                                    Console.Write(new string(' ', maxWidth)); // Ajouter des espaces vides pour les cartes plus courtes
-                                }
-                                Console.Write(" "); // Ajouter un espace entre les cartes
-                            }
-                            Console.WriteLine(); // Passer à la ligne suivante
-                        }
-
                         Console.ReadKey();
+                    }
 
-                    } while (restart);
+
                 }
             }
         }

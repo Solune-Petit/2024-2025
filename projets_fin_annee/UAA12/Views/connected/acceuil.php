@@ -1,5 +1,12 @@
-<!-- section de droite -->
-<div class="rightPart">
+<?php
+var_dump($_SESSION["userProject"]);
+fetchUserProject($pdo);
+?>
+
+<div class="flexible">
+
     
 </div>
-<div></div>
+<div class="center"></div>
+
+</div>

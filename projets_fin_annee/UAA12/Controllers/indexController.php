@@ -1,5 +1,7 @@
 <?php
 
+require_once("Models\userModels.php");
+
 $uri = $_SERVER["REQUEST_URI"];
 
 if (($uri === '/' || $uri === '/acceuil' || $uri === '/index.php') && !isset($_SESSION["user"])){

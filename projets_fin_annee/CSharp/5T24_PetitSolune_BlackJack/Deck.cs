@@ -53,7 +53,7 @@ namespace _5T24_PetitSolune_BlackJack
                     foreach (string rank in ranks)
                     {
                         // Création de l'image de la carte
-                        string image = $" -------\r\n|{suit}     {suit}|\r\n|       |\r\n|   {rank}   |\r\n|       |\r\n|{suit}     {suit}|\r\n ------- ";
+                        string image = $" ------- \r\n|{suit}     {suit}|\r\n|       |\r\n|   {rank}   |\r\n|       |\r\n|{suit}     {suit}|\r\n ------- ";
 
                         // Ajout de la carte au jeu
                         Cards.Add(new Card(suit, rank, image));

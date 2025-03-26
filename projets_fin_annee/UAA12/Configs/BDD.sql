@@ -15,8 +15,11 @@ CREATE TABLE `uaa9_24-25`.`user` (
 #création de la table Projet
 CREATE TABLE `uaa9_24-25`.`projet` (
   `ProjetID` INT NOT NULL AUTO_INCREMENT,
+  `ProjetMakerID` INT NOT NULL,
   `ProjetTitle` VARCHAR(45) NULL,
-  `ProjetDescription` VARCHAR(45) NULL,
+  `ProjetDescription` VARCHAR(255) NULL,
+  `ProjetDateStart` DATE NULL,
+  `ProjetDateEnd` DATE NULL,
   PRIMARY KEY (`ProjetID`),
   UNIQUE INDEX `ProjetID_UNIQUE` (`ProjetID` ASC) VISIBLE);
 
@@ -26,6 +29,7 @@ CREATE TABLE `uaa9_24-25`.`userprojet` (
   `userProjetID` INT NOT NULL AUTO_INCREMENT,
   `UserID` INT NOT NULL,
   `ProjetID` INT NOT NULL,
+  `ProjetMakerID` INT NOT NULL,
   PRIMARY KEY (`userProjetID`),
   UNIQUE INDEX `userProjetID_UNIQUE` (`userProjetID` ASC) VISIBLE,
   CONSTRAINT `UserID`

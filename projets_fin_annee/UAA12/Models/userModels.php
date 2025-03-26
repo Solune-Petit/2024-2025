@@ -57,3 +57,17 @@ function logOutUser($pdo){
     session_destroy();
     header("Location:/");
 }
+
+function fetchUserProject($pdo){
+    try{
+        $query = "Select * from Projet where ProjetID IN (SELECT ProjetID FROM userprojet WHERE UserID = :userID)";
+        $fetch = $pdo->prepare($query);
+        $fetch->execute(['userID' => $_SESSION['user']->UserID]);
+        $projet = $fetch->fetchAll();
+        $_SESSION["userProject"] = $projet;
+
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
+    }
+}
