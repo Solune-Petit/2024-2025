@@ -59,15 +59,26 @@ function logOutUser($pdo){
 }
 
 function fetchUserProject($pdo){
-    try{
-        $query = "Select * from Projet where ProjetID IN (SELECT ProjetID FROM userprojet WHERE UserID = :userID)";
+    try {
+        // Requête SQL optimisée avec jointure
+        $query = "SELECT p.*, up.*
+                  FROM Projet p
+                  INNER JOIN userProjet up ON p.ProjetID = up.ProjetID
+                  WHERE up.UserID = :userID";
+
         $fetch = $pdo->prepare($query);
         $fetch->execute(['userID' => $_SESSION['user']->UserID]);
-        $projet = $fetch->fetchAll();
-        $_SESSION["userProject"] = $projet;
 
-    }catch(PDOException $e){
-        $message = $e->getMessage();
-        die($message);
+        // Récupérer les résultats sous forme d'objets
+        $userProjects = $fetch->fetchAll();
+
+        // Stocker les résultats dans la session
+        $_SESSION["userProject"] = $userProjects;
+
+    } catch(PDOException $e) {
+        // Gestion des erreurs plus précise
+        echo "Une erreur s'est produite : " . $e->getMessage();
+        // Enregistrement de l'erreur dans un fichier log (facultatif)
+        error_log("Erreur fetchUserProject : " . $e->getMessage(), 3, "error.log");
     }
 }

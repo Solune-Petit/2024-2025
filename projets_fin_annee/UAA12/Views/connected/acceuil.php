@@ -1,9 +1,4 @@
-<?php
-var_dump($_SESSION["userProject"]);
-fetchUserProject($pdo);
-?>
-
-<div class="flexible">
+<div class="flexible" style="background-color: aqua; padding:300px; padding-bottom:900px;">
 
     
 </div>

@@ -10,6 +10,8 @@ if ($uri === '/LogIn-Off' ){
     if (isset($_POST["loginBtn"])){
         if(connectUser($pdo)){
             header("Location: /acceuil");
+            fetchUserProject($pdo);
+
         }else{
             echo "Erreur lors de la connexion de l'utilisateur";
         }
@@ -24,4 +26,8 @@ if ($uri === '/LogIn-Off' ){
 }else if ($uri === '/disconnect'){
     logOutUser($pdo);
     header('Location: /');
+}else if ($uri === '/Profile'){
+    $title = "Profile";
+    $template = "Views\Users\profile.php";
+    require_once("Views/base.php");
 }

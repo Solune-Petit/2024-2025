@@ -45,10 +45,9 @@
         </form>
         </div>
 
-        <div class="switch">
-            <p id="switchText">Pas encore inscrit ?</p>
-            <a href="#" id="switchForm"><p>Inscrivez-vous ici</p></a>
-        </div>
+        <p id="switchText">
+            Pas encore inscrit ? <br> <a href="#" id="switchForm">Inscrivez-vous ici</a>
+        </p>
     </div>
 </div>
 

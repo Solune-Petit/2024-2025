@@ -5,8 +5,7 @@
         <a href="project.php?projectID=<?= $project->ProjetID ?>">
             <div class="project">
                 <h2><?= $project->ProjetTitle ?></h2>
-                <h3><?= $project->projetMaker ?></h3>
-
+                <h3><?= $project->ProjetMakerName ?></h3>
             </div>
         </a>
     <?php endforeach; ?>

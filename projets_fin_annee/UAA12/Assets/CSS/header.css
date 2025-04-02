@@ -1,13 +1,25 @@
-header{
+header {
     height: 70px;
     background-color: rgb(121, 5, 175);
     border: solid 2px black;
     border-radius: 10px;
     font-size: 40px;
-    
+
 }
 
-header a{
+header a {
     text-decoration: none;
     color: white;
+}
+
+
+footer {
+    background-color: rgb(121, 5, 175);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* "pousser" footer bas */
+    z-index: 2;
+    /* margin-bottom: 70px;
+    padding-bottom: 15px; */
 }

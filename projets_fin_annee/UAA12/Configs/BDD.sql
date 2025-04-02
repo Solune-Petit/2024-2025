@@ -3,73 +3,66 @@
 CREATE SCHEMA `uaa9_24-25` ;
 
 #créer la table User
-CREATE TABLE `uaa9_24-25`.`user` (
-  `UserID` INT NOT NULL AUTO_INCREMENT,
-  `UserNom` VARCHAR(255) NOT NULL,
-  `UserPrenom` VARCHAR(255) NOT NULL,
-  `UserMail` VARCHAR(255) NOT NULL,
-  `UserPassword` VARCHAR(255) NOT NULL,
-  `UserLogin` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`UserID`));
+CREATE TABLE `user` (
+  `UserID` int NOT NULL AUTO_INCREMENT,
+  `UserNom` varchar(255) NOT NULL,
+  `UserPrenom` varchar(255) NOT NULL,
+  `UserMail` varchar(255) NOT NULL,
+  `UserPassword` varchar(255) NOT NULL,
+  `UserLogin` varchar(255) NOT NULL,
+  PRIMARY KEY (`UserID`),
+  UNIQUE KEY `idx_UserPrenom` (`UserPrenom`)
+)
 
 #création de la table Projet
-CREATE TABLE `uaa9_24-25`.`projet` (
-  `ProjetID` INT NOT NULL AUTO_INCREMENT,
-  `ProjetMakerID` INT NOT NULL,
-  `ProjetTitle` VARCHAR(45) NULL,
-  `ProjetDescription` VARCHAR(255) NULL,
-  `ProjetDateStart` DATE NULL,
-  `ProjetDateEnd` DATE NULL,
+CREATE TABLE `projet` (
+  `ProjetID` int NOT NULL AUTO_INCREMENT,
+  `ProjetTitle` varchar(45) DEFAULT NULL,
+  `ProjetDescription` varchar(500) DEFAULT NULL,
+  `projetDateStart` date DEFAULT NULL,
+  `projetDateEnd` date DEFAULT NULL,
+  `projetMaker` int DEFAULT NULL,
   PRIMARY KEY (`ProjetID`),
-  UNIQUE INDEX `ProjetID_UNIQUE` (`ProjetID` ASC) VISIBLE);
+  UNIQUE KEY `ProjetID_UNIQUE` (`ProjetID`),
+  KEY `UserID_idx` (`projetMaker`)
+)
 
 
 #création de la table de jointure userProjet de façon à ce que si il faut, on peut suprimer des éléments plus facilement
-CREATE TABLE `uaa9_24-25`.`userprojet` (
-  `userProjetID` INT NOT NULL AUTO_INCREMENT,
-  `UserID` INT NOT NULL,
-  `ProjetID` INT NOT NULL,
-  `ProjetMakerID` INT NOT NULL,
+CREATE TABLE `userprojet` (
+  `userProjetID` int NOT NULL AUTO_INCREMENT,
+  `UserID` int NOT NULL,
+  `ProjetID` int NOT NULL,
+  `ProjetMakerName` varchar(45) NOT NULL,
   PRIMARY KEY (`userProjetID`),
-  UNIQUE INDEX `userProjetID_UNIQUE` (`userProjetID` ASC) VISIBLE,
-  CONSTRAINT `UserID`
-    FOREIGN KEY (`UserID`)
-    REFERENCES `uaa9_24-25`.`user` (`UserID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `ProjetID`
-    FOREIGN KEY (`ProjetID`)
-    REFERENCES `uaa9_24-25`.`projet` (`ProjetID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION
-);
+  UNIQUE KEY `userProjetID_UNIQUE` (`userProjetID`),
+  KEY `UserID` (`UserID`),
+  KEY `projetMakerID` (`ProjetID`),
+  KEY `ProjetMakerID_idx` (`ProjetMakerName`),
+  CONSTRAINT `ProjetID` FOREIGN KEY (`ProjetID`) REFERENCES `projet` (`ProjetID`),
+  CONSTRAINT `UserID` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`)
+)
 
 #création de la table categorie qui aura un lien avec la table projet
-CREATE TABLE `uaa9_24-25`.`categorie` (
-  `categorieID` INT NOT NULL AUTO_INCREMENT,
-  `categorieNom` VARCHAR(45) NULL,
-  `categoriePosition` INT NULL,
-  `ProjetID` INT NOT NULL,  -- Ajout de la colonne ProjetID
+CREATE TABLE `categorie` (
+  `categorieID` int NOT NULL AUTO_INCREMENT,
+  `categorieNom` varchar(45) DEFAULT NULL,
+  `categoriePosition` int DEFAULT NULL,
+  `ProjetID` int NOT NULL,
   PRIMARY KEY (`categorieID`),
-  CONSTRAINT `FK_ProjetID`  -- Nouveau nom de la contrainte
-    FOREIGN KEY (`ProjetID`)  -- Définition de la clé étrangère
-    REFERENCES `uaa9_24-25`.`projet` (`ProjetID`)  -- Lien avec la colonne ProjetID de la table projet
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION
-);
+  KEY `FK_ProjetID` (`ProjetID`),
+  CONSTRAINT `FK_ProjetID` FOREIGN KEY (`ProjetID`) REFERENCES `projet` (`ProjetID`)
+)
 
 #création de la table carte qui aura un lien avec la table categorie
-CREATE TABLE `uaa9_24-25`.`carte` (
-  `carteID` INT NOT NULL AUTO_INCREMENT,  -- Ajout de AUTO_INCREMENT
-  `carteNom` VARCHAR(45) NULL,
-  `carteDescription` VARCHAR(45) NULL,
-  `carteDateDebut` DATE NULL,
-  `carteDateFin` DATE NULL,
-  `categorieID` INT NOT NULL,  -- Ajout de la colonne categorieID
+CREATE TABLE `carte` (
+  `carteID` int NOT NULL AUTO_INCREMENT,
+  `carteNom` varchar(45) DEFAULT NULL,
+  `carteDescription` varchar(45) DEFAULT NULL,
+  `carteDateDebut` date DEFAULT NULL,
+  `carteDateFin` date DEFAULT NULL,
+  `categorieID` int NOT NULL,
   PRIMARY KEY (`carteID`),
-  CONSTRAINT `FK_categorieID`  -- Nom de la contrainte
-    FOREIGN KEY (`categorieID`)  -- Définition de la clé étrangère
-    REFERENCES `uaa9_24-25`.`categorie` (`categorieID`)  -- Lien avec la table categorie
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION
-);
+  KEY `FK_categorieID` (`categorieID`),
+  CONSTRAINT `FK_categorieID` FOREIGN KEY (`categorieID`) REFERENCES `categorie` (`categorieID`)
+)
