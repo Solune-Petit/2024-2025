@@ -1,0 +1,19 @@
+﻿string[][] cardTable = new string[52][];
+
+
+for (int i = 0; i < shuffledDeck.Length; i++)
+{
+    cardTable[i] = Deck.Cards[shuffledDeck[i]].Image.Split("\r\n");
+}
+
+
+//permet de faire en sorte d'écrire les cartes côtes à côtes en les entrant manuellement
+
+for (int j = 0; j < 7; j++)
+{
+    for (int i = 0; i < cardTable.Length; i++)
+    {
+        output += cardTable[i][j] + " ";
+    }
+    output += "\n";
+}

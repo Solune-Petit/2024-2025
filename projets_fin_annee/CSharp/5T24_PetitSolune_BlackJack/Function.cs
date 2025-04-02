@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _5T24_PetitSolune_BlackJack.Deck;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +28,97 @@ namespace _5T24_PetitSolune_BlackJack
             return Number;
         }
 
-        public string playerInterface()
+        public string playerInterface(deck Deck, int[] handPlayer, int[] handDealer, bool isDealerTurn, string[] blancCard)
         {
             string output = "";
 
+            string[][] cardTable = new string[11][];
 
-            return output;
+            if (!isDealerTurn)
+            {
+
+                output = "Dealer :\n           ";
+
+                cardTable[0] = Deck.Cards[handDealer[0]].Image.Split("\r\n");
+                cardTable[1] = blancCard;
+
+
+                //permet de faire en sorte d'écrire les cartes du dealer côtes à côtes
+
+                for (int j = 0; j < 7; j++)
+                {
+                    for (int i = 0; i < cardTable.Length; i++)
+                    {
+                        if(cardTable[i] != null)
+                        {
+                            output += cardTable[i][j] + " ";
+                        }
+                    }
+                    output += "\n           ";
+                }
+
+                output += "\n" +
+                    "voici vos options :\n" +
+                    "-  Hit         (enter)\n" +
+                    "-  Stand       (-)\n" +
+                    "-  Double Down (*)\n" +
+                    "-  Split       (/)\n\n\n";
+
+
+                output += "Player :\n           ";
+
+                for (int i = 0; i < handPlayer.Length; i++)
+                {
+                    if (handPlayer[i] != -1)
+                    {
+                        cardTable[i] = Deck.Cards[handPlayer[i]].Image.Split("\r\n");
+                    }
+                }
+
+                for (int j = 0; j < 7; j++)
+                {
+                    for (int i = 0; i < cardTable.Length; i++)
+                    {
+                        if (cardTable[i] != null)
+                        {
+                            output += cardTable[i][j] + " ";
+                        }
+                    }
+                    output += "\n           ";
+                }
+            }
+            else
+            {
+
+            }
+
+                return output;
+        }
+
+        public void shuffleDeck(ref int[] shuffledDeck)
+        {
+            //mélange le deck
+            Random rnd = new Random();
+            int n = shuffledDeck.Length;
+            while (n > 1)
+            {
+                n--;
+                int k = rnd.Next(n + 1);
+                int value = shuffledDeck[k];
+                shuffledDeck[k] = shuffledDeck[n];
+                shuffledDeck[n] = value;
+            }
+        }
+
+        public void rearangeDeck(ref int[] shuffledDeck)
+        {
+            //fait tourner le deck
+            int temp = shuffledDeck[0];
+            for (int i = 0; i < shuffledDeck.Length - 1; i++)
+            {
+                shuffledDeck[i] = shuffledDeck[i + 1];
+            }
+            shuffledDeck[shuffledDeck.Length - 1] = temp;
         }
     }
 }

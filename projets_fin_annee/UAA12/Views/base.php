@@ -17,8 +17,12 @@
         <?php require_once("Views/components/header.php") ?>
     </header>
     <main class="flexible">
+        <div class="rightPart">
         <?php 
             require_once("Views\components\projectNav.php");
+        ?>
+        </div>
+        <?=
             require_once($template) ?>
     </main>
     <footer>

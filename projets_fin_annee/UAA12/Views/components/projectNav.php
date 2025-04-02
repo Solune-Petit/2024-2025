@@ -1,4 +1,3 @@
-<div class="rightPart">
 <h1>Bienvenue <?php echo (strtoupper($_SESSION["user"]->UserLogin)) ?></h1>
 <p>voici vos projets :</p>
 <div class="projects">
