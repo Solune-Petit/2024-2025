@@ -28,7 +28,7 @@ namespace _5T24_PetitSolune_BlackJack
             return Number;
         }
 
-        public string playerInterface(deck Deck, int[] handPlayer, int[] handDealer, bool isDealerTurn, string[] blancCard)
+        public string playerInterface(deck Deck, int[] handPlayer, int[] handDealer, bool isDealerTurn, string[] blancCard, int points, bool endRound, int dealerPoints)
         {
             string output = "";
 
@@ -56,14 +56,21 @@ namespace _5T24_PetitSolune_BlackJack
                     }
                     output += "\n           ";
                 }
-
-                output += "\n" +
-                    "voici vos options :\n" +
-                    "-  Hit         (enter)\n" +
-                    "-  Stand       (-)\n" +
-                    "-  Double Down (*)\n" +
-                    "-  Split       (/)\n\n\n";
-
+                if (!endRound)
+                {
+                    output += "\n" +
+                        "voici vos options :\n" +
+                        "-  Hit         (enter)\n" +
+                        "-  Stand       (-)\n" +
+                        "-  Double Down (*)\n\n\n";
+                }
+                else
+                {
+                    output += "\n" +
+                        "voici vos options :\n" +
+                        "vous ne pouvez plus jouer\n" +
+                        "pour passer au résultat du dealer, appuiez sur n'importe quelle touche\n\n\n";
+                }
 
                 output += "Player :\n           ";
 
@@ -86,13 +93,67 @@ namespace _5T24_PetitSolune_BlackJack
                     }
                     output += "\n           ";
                 }
+
+                output += "\n\n\n vous avez " + points + " points";
             }
             else
             {
+                //affichage tour dealer
+                output = "Dealer :\n           ";
 
+                for (int i = 0; i < handDealer.Length; i++)
+                {
+                    if (handDealer[i] != -1)
+                    {
+                        cardTable[i] = Deck.Cards[handDealer[i]].Image.Split("\r\n");
+                    }
+                }
+
+
+                //permet de faire en sorte d'écrire les cartes du dealer côtes à côtes
+
+                for (int j = 0; j < 7; j++)
+                {
+                    for (int i = 0; i < cardTable.Length; i++)
+                    {
+                        if (cardTable[i] != null)
+                        {
+                            output += cardTable[i][j] + " ";
+                        }
+                    }
+                    output += "\n           ";
+                }
+
+                output += "le dealer à "+ dealerPoints +" points\n\n\n\n\n\n";
+
+                cardTable = new string[11][];
+
+                output += "Player :\n           ";
+
+                for (int i = 0; i < handPlayer.Length; i++)
+                {
+                    if (handPlayer[i] != -1)
+                    {
+                        cardTable[i] = Deck.Cards[handPlayer[i]].Image.Split("\r\n");
+                    }
+                }
+
+                for (int j = 0; j < 7; j++)
+                {
+                    for (int i = 0; i < cardTable.Length; i++)
+                    {
+                        if (cardTable[i] != null)
+                        {
+                            output += cardTable[i][j] + " ";
+                        }
+                    }
+                    output += "\n           ";
+                }
+
+                output += "\n\n\n vous avez " + points + " points";
             }
 
-                return output;
+            return output;
         }
 
         public void shuffleDeck(ref int[] shuffledDeck)

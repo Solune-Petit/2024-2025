@@ -33,3 +33,7 @@
 .bloc{
     display: block;
 }
+
+.flex-column{
+    flex-direction: column;
+}

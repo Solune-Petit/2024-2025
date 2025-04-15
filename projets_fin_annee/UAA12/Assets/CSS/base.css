@@ -11,3 +11,61 @@ a{
     text-decoration: none;
     color: white;
 }
+
+.Background{
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.LogedMenu{
+    width: 100%;
+}
+
+.menuLeft{
+    width: 45%;
+}
+
+.menuRight{
+    width: 45%;
+}
+
+.menuRight>*{
+    margin: 20px;
+}
+
+.newProjectInput{
+    width: 450px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.newProjectInput>textarea{
+    width: 250px;
+    height: 100px;
+    background-color: transparent;
+    border: solid black 2px;
+    border-radius: 15px;
+}
+
+.newProjectInput>input{
+    background-color: transparent;
+    border: solid black 2px;
+    height: 30px;
+    font-size: larger;
+}
+
+.menuRight>form>button{
+    width: 200px;
+    height: 50px;
+    border: solid black 2px;
+    border-radius: 10px;
+    color: white;
+    font-size: larger;
+}
+
+.menuRight>form>button:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: 1s;
+}

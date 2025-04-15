@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("5T24_PetitSolune_BlackJack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1549b46d834b84a291e4a4e3cecfbf7d7befa5ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e851555d64e73bbb3848b103aadcdaa4edd939b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("5T24_PetitSolune_BlackJack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("5T24_PetitSolune_BlackJack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
