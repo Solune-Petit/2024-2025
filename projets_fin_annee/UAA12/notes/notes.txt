@@ -1,2 +1,0 @@
-penser à faire en sorte le panneau de gauche soit un peu comme le template
-penser à faire un pos fixed pour le panneau de gauche

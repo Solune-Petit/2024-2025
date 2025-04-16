@@ -2,6 +2,11 @@
 
 require_once("Models\userModels.php");
 
+if(isset($_SESSION["user"])){
+    fetchUserProject($pdo);
+}
+
+
 $uri = $_SERVER["REQUEST_URI"];
 
 if (($uri === '/' || $uri === '/acceuil' || $uri === '/index.php') && !isset($_SESSION["user"])){

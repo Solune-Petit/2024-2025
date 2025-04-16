@@ -29,12 +29,13 @@
 
 
                 
-                //choisir si on veux juste regarder les cartes où jouer au jeu
+                //choisir si on veux juste regarder les cartes ou jouer au jeu
                 do
                 {
 
-                    Console.WriteLine("Bienvenu sur mon Jeu de Black Jack!\nActuellement, vous vous trouvez sur le menu qui permet de choisir entre la zone de test ou le jeu.\n" +
-                        "Voulez vous jouer au jeu (Y) ou aller dans la zone de test ?(N)");
+                    Console.WriteLine("Bienvenu sur mon Jeu de Black Jack!\n" +
+                        "Actuellement, vous vous trouvez sur le menu qui permet de choisir entre la zone de test ou le jeu.\n" +
+                        "Voulez vous jouer au jeu (Y)ou aller dans la zone de test ?(N)");
                     ConsoleKey temp = Console.ReadKey().Key;
                     Console.Clear();
                     if (temp == ConsoleKey.N)
@@ -52,7 +53,6 @@
 
 
                 } while (typeOfUse == string.Empty);
-
 
 
                 // Afficher une carte choisie
@@ -101,6 +101,45 @@
                 }
                 else
                 {
+                    ConsoleKey tempInput;
+
+                    do
+                    {
+                        Console.Clear();
+                        Console.WriteLine("connaissez vous les rêgles (Y/N)?");
+                        tempInput = Console.ReadKey().Key;
+                    } while (tempInput != ConsoleKey.Y && tempInput != ConsoleKey.N);
+
+                    if (tempInput == ConsoleKey.N)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Le Blackjack est un jeu de cartes dont l'objectif principal est de battre le croupier.\n" +
+                            "Pour ce faire, les joueurs doivent constituer une main dont la valeur est la plus proche de 21 sans jamais le dépasser.\n\n" +
+                            "Dans le jeu, les cartes ont des valeurs spécifiques :\n" +
+                            "-  Les cartes numérotées de 2 à 10 (le 10 = 0) conservent leur valeur\n" +
+                            "-  les figures (Valet, Dame, Roi) valent 10.\n" +
+                            "-  L'As, quant à lui, peut valoir soit 1 soit 11, selon ce qui est le plus avantageux pour le joueur.\n\n\n" +
+                            "Le déroulement d'une partie commence par la mise initiale, où chaque joueur place sa mise.\n\n" +
+                            "Ensuite, chaque joueur reçoit deux cartes visibles, tandis que le croupier reçoit une carte visible et une autre cachée.\n\n" +
+                            "À ce stade, les joueurs ont plusieurs options :\n" +
+                            "HIT :          tirer une carte supplémentaire\n" +
+                            "STAND :        rester avec votre main actuelle\n" +
+                            "DOUBLE DOWN :  doubler votre mise et prendre une carte en plus mais vous ne pourrez plus jouer\n" +
+                            "SPLIT :        séparer deux cartes de même valeur en deux mains distinctes\n\n\n" +
+                            "Une fois que tous les joueurs ont terminé leur tour, le croupier révèle sa carte cachée.\n" +
+                            "Selon les règles de la maison, il doit tirer des cartes jusqu'à atteindre au moins 17.\n\n" +
+                            "Pour ce projet, la maison (moi) donneras comme valeur max le 19 (demandez pas pourquoi, j’aime ce chiffre :D)\n\n" +
+                            "Les conditions de victoire sont simples :\n" +
+                            "-  Si un joueur obtient un Blackjack (un As et une carte de 10 en première main), il remporte 1,5 fois sa mise.\n" +
+                            "-  Si sa main est plus proche de 21 que celle du croupier, il gagne sa mise.\n" +
+                            "-  Si le croupier dépasse 21, tous les joueurs restants gagnent.\n" +
+                            "-  Cependant, si un joueur dépasse lui-même 21, il perd automatiquement sa mise.\n" +
+                            "-  En cas d'égalité entre le joueur et le croupier, la mise est restituée au joueur.\n\n\n" +
+                            "pour sortir de ce menu, appuiez sur n'importe quelle touche");
+                        Console.ReadKey();
+                    }
+                    Console.Clear();
+
                     ////////le jeu en lui même
 
                     //////assignation des variables
@@ -109,7 +148,7 @@
 
 
                     //int
-                    int playerMoney = 0;                //argent que le joueur a
+                    double playerMoney = 0;                //argent que le joueur a
                     int timeToShuffle = 0;              //temps avant de mélanger le deck
 
 
@@ -141,7 +180,7 @@
                         Console.WriteLine("avec combien venez-vous sur la table ?");
                         temp = Console.ReadLine();
                         Console.Clear();
-                    } while (!int.TryParse(temp, out playerMoney));
+                    } while (!double.TryParse(temp, out playerMoney));
 
 
                     outils.shuffleDeck(ref shuffledDeck);
@@ -348,7 +387,7 @@
                                 }
                                 if(playerPoints == 21)
                                 {
-                                    playerMoney += bet;
+                                    playerMoney += bet * 1.5;
                                 }
                             }
                             else
@@ -362,7 +401,7 @@
                             Console.WriteLine("vous n'avez pas assez d'argent. revenez quand vous êtes plus riches");
                         }
 
-                            Console.WriteLine("\n\nvoulez vous rejouer une partie ? (Y/N) vous avez : " + playerMoney);
+                            Console.WriteLine("\n\nvoulez vous rejouer une partie ? (Y/N) vous avez : " + playerMoney + "€");
                     } while ((Console.ReadKey().Key != ConsoleKey.N) && playerMoney > 0);
                 }
             }

@@ -2,11 +2,11 @@
     <div id="container">
         <div class="div1 profileDiv">
             <h1>Voici votre profile</h1>
-            <p>Nom : <?= $_SESSION["user"]->UserNom ?></p>
-            <p>Prenom : <?= $_SESSION["user"]->UserPrenom ?></p>
-            <p>Adress Email : <?= $_SESSION["user"]->UserMail?></p>
-            <p>Nom d'utillisateur : <?= $_SESSION["user"]->UserLogin?></p>
-            <p>Mot de passe : <?php for($i=0;$i<strlen($_SESSION["user"]->UserPassword);$i++){
+            <p>Nom : <?= $_SESSION["user"]->userNom ?></p>
+            <p>Prenom : <?= $_SESSION["user"]->userPrenom ?></p>
+            <p>Adress Email : <?= $_SESSION["user"]->userMail?></p>
+            <p>Nom d'utillisateur : <?= $_SESSION["user"]->userLogin?></p>
+            <p>Mot de passe : <?php for($i=0;$i<strlen($_SESSION["user"]->userPassword);$i++){
                 echo("*");
             } ?></p>
         </div>

@@ -17,7 +17,7 @@ if ($uri === '/LogIn-Off' ){
         }
     }else if(isset($_POST["registerBtn"])){
         if(createUser($pdo)){
-            header("Location : /acceuil");
+            header("Location:/");
         }
     }
     $title = "Log In";

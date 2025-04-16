@@ -1,12 +1,12 @@
 <div class="LogedMenu flexible space-around">
     <div class="menuLeft align-item-center flexible flex-column Background">
-        <h2>Voici les projets que vous avez. Pour y accédersimplement cliquez sur le projet</h2>
+        <h2>Voici les projets que vous avez.</h2>
+        <h2> Pour y accéder simplement cliquez sur le projet</h2>
         <div class="projects">
             <?php foreach ($_SESSION["userProject"] as $project) : ?>
-                <a href="project?ProjetID=<?= $project->ProjetID ?>">
+                <a href="project?ProjetID=<?= $project->projetID ?>">
                     <div class="project">
-                        <h2><?= $project->ProjetTitle ?></h2>
-                        <h3><?= $project->ProjetMakerName ?></h3>
+                        <h2><?= $project->projetTitle ?></h2>
                     </div>
                 </a>
             <?php endforeach; ?>
@@ -24,7 +24,6 @@
                 <textarea id="projectDescription" name="projectDescription" required maxlength="255"></textarea>
             </div>
             <button type="submit" class="Background" id="projectSubmit" name="projectSubmit">Créer le projet</button>
-        </form
         </form>
     </div>
 </div>

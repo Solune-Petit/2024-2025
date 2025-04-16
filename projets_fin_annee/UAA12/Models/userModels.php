@@ -67,7 +67,7 @@ function fetchUserProject($pdo){
                   WHERE up.UserID = :userID";
 
         $fetch = $pdo->prepare($query);
-        $fetch->execute(['userID' => $_SESSION['user']->UserID]);
+        $fetch->execute(['userID' => $_SESSION['user']->userID]);
 
         // Récupérer les résultats sous forme d'objets
         $userProjects = $fetch->fetchAll();
