@@ -99,6 +99,7 @@
                     Console.Clear();
 
                 }
+                
                 else
                 {
                     ConsoleKey tempInput;
@@ -140,28 +141,33 @@
                     }
                     Console.Clear();
 
+                    do
+                    {
+                        Console.WriteLine("combien de joueurs êtes vous ? (max 8)");
+                        tempInput = Console.ReadKey().Key;
+                        Console.Clear();
+                    }while (tempInput != ConsoleKey.D1 && tempInput != ConsoleKey.NumPad1 && tempInput != ConsoleKey.D2 && tempInput != ConsoleKey.NumPad2 && tempInput != ConsoleKey.D3 && 
+                    tempInput != ConsoleKey.NumPad3 && tempInput != ConsoleKey.D4 && tempInput != ConsoleKey.NumPad4 && tempInput != ConsoleKey.D5 && tempInput != ConsoleKey.NumPad5 && 
+                    tempInput != ConsoleKey.D6 && tempInput != ConsoleKey.NumPad6 && tempInput != ConsoleKey.D7 && tempInput != ConsoleKey.NumPad7 && tempInput != ConsoleKey.D8 && tempInput != ConsoleKey.NumPad8);
+
+                    int nbPlayers = int.Parse(getKey.convertKey(tempInput));
+
+
                     ////////le jeu en lui même
 
                     //////assignation des variables
+
                     //bool
-                    bool restart = true;                //permet de recommencer une partie
+                    bool restart = true;                                    //permet de recommencer une partie
 
 
                     //int
-                    double playerMoney = 0;                //argent que le joueur a
-                    int timeToShuffle = 0;              //temps avant de mélanger le deck
-
-
-                    //string
-                    string temp;                        //variable temporaire
-                    string[] blancCard =                //carte blanche
-                    {" ------- ","|       |","|       |","|       |","|       |","|       |"," ------- "};
+                    int timeToShuffle = 0;                                  //temps avant de mélanger le deck
 
 
                     //int[]
-                    int[] handPlayer = new int[11];     //main du joueur
-                    int[] handDealer = new int[11];     //main du dealer
-                    int[] shuffledDeck =                //variable pour l'ordre des cartes
+                    int[] handDealer = new int[11];                         //main du dealer
+                    int[] shuffledDeck =                                    //variable pour l'ordre des cartes
                     {
                     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
                     13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
@@ -170,17 +176,46 @@
                     };
 
 
-                    //ConsoleKey
-                    ConsoleKey askRestart;              //demande si le joueur veut recommencer
-                    ConsoleKey uInput = ConsoleKey.Z;                  //entrée utilisateur
+                    //int[][]
+                    int[][] players = new int[nbPlayers][];                 //gestions des mains différents joueurs
 
-                    //demande l'argent du joueur
-                    do
+
+                    //double
+                    double tempMoney = 0;                                   //argent du joueur
+
+
+                    //double[]
+                    double[] playerMoney = new double[nbPlayers];           //argent que le joueur a
+
+
+                    //string
+                    string tempInputMoney = "";                             //variable temporaire
+
+
+                    //string[]
+                    string[] blancCard =                                    //carte blanche
+                    {" ------- ","|       |","|       |","|       |","|       |","|       |"," ------- "};
+
+
+                    //ConsoleKey
+                    ConsoleKey askRestart;                                  //demande si le joueur veut recommencer
+                    ConsoleKey uInput = ConsoleKey.Z;                       //entrée utilisateur
+
+
+
+
+                    //demande l'argent que les joueurs ammènent sur la table
+                    for (int i = 0; i < nbPlayers; i++)
                     {
-                        Console.WriteLine("avec combien venez-vous sur la table ?");
-                        temp = Console.ReadLine();
-                        Console.Clear();
-                    } while (!double.TryParse(temp, out playerMoney));
+                        do
+                        {
+                            Console.WriteLine("Joueur " + (i + 1) + ", avec combien d'argent venez-vous sur la table ?");
+                            tempInputMoney = Console.ReadLine();
+                            Console.Clear();
+                        } while (!double.TryParse(tempInputMoney, out tempMoney));
+
+                        playerMoney[i] = tempMoney;
+                    }
 
 
                     outils.shuffleDeck(ref shuffledDeck);
@@ -189,219 +224,260 @@
                     Console.Clear();
                     do //déroulement de la partie
                     {
-                        Console.Clear();
-                        if(playerMoney > 0)
+                        for (int i = 0; i < nbPlayers; i++)
                         {
-                            //mélange des cartes
-                            if (timeToShuffle == 10)
+
+                            Console.Clear();
+                            if (playerMoney[i] > 0)
+                            {
+                                Console.WriteLine("Joueur " + (i + 1) + ", vous avez assez pour jouer");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Joueur " + (i + 1) + ", vous n'avez pas assez d'argent. Revenez quand vous êtes plus riches");
+                            }
+                            Console.WriteLine("appuiez sur n'importe quelle touche pour continuer");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+
+                        //mélange des cartes
+                        if (timeToShuffle == 10)
                             {
                                 timeToShuffle = 0;
                                 outils.shuffleDeck(ref shuffledDeck);
                             }
-                            else
-                            {
-                                timeToShuffle++;
-                            }
+                        else
+                        {
+                            timeToShuffle++;
+                        }
 
-                            bool endRound = false;
+                        bool endRound = false;
 
-                            int bet = 0;
 
+                        int[] bet = new int[nbPlayers];
+                        int tempBet;
+
+                        for (int i = 0; i < nbPlayers; i++)
+                        {
                             do
                             {
                                 do
                                 {
-                                    Console.WriteLine("combien voulez vous miser ? vous avez : " + playerMoney);
-                                } while (!int.TryParse(Console.ReadLine(), out bet));
-                            } while (bet > playerMoney);
+                                    Console.WriteLine("Joueur " + (i+1) + ", combien voulez vous miser ? vous avez : " + playerMoney[i]);
+                                } while (!int.TryParse(Console.ReadLine(), out tempBet));
+                            } while (tempBet > playerMoney[i] && tempBet != 0);
+                            bet[i] = tempBet;
                             Console.Clear();
+                        }
 
-                            //distribution des cartes
-                            handPlayer[0] = shuffledDeck[0];
-                            handDealer[0] = shuffledDeck[1];
-                            handPlayer[1] = shuffledDeck[2];
-                            int tempHandDealer = shuffledDeck[3];
-                            int placeCardSpot = 2;
+                        int placeCardSpot = 0;
 
-                            for(int i = 2; i < 11; i++)
+
+                        //distribution des cartes
+                        for (int i = 0; i < 2; i++)
+                        {
+                            for (int j = 0; j < nbPlayers; j++)
                             {
-                                handPlayer[i] = -1;
+                                players[j][i] = shuffledDeck[placeCardSpot];
+                                placeCardSpot++;
                             }
+                            handDealer[i] = shuffledDeck[placeCardSpot];
+                            placeCardSpot++;
+                        }
 
-                            for (int i = 2; i < 11; i++)
+                        int tempHandDealer = handDealer[1];
+
+                        for (int i = 2; i < 11; i++)
+                        {
+                            for (int j = 0; j < nbPlayers; j++)
                             {
-                                handDealer[i] = -1;
+                                players[j][i] = -1;
                             }
+                        }
+
+                        for (int i = 2; i < 11; i++)
+                        {
+                            handDealer[i] = -1;
+                        }
 
 
-                            for (int i = 0; i < 3; i++)
+                        for (int i = 0; i < placeCardSpot; i++)
+                        {
+                            outils.rearangeDeck(ref shuffledDeck);
+                        }
+
+
+                        int[] playerPlaceSpot = new int[nbPlayers];
+
+                        for (int i = 0; i < nbPlayers; i++)
+                        {
+                            playerPlaceSpot[i] = 2;
+                        }
+
+
+                        endRound = false;
+                        int playerPoints = 0;
+                        int dealerPoints = 0;
+                        bool isDealerTurn = false;
+                        bool doubleDown = false;
+                        //round player
+                        do
+                        {
+                            int[] tempCards = new int[2];
+                            int counter = 0;
+                            //compter les points du joueur
+                            playerPoints = 0;
+                            for (int i = 0; i < placeCardSpot; i++)
                             {
-                                outils.rearangeDeck(ref shuffledDeck);
-                            }
-
-
-                            endRound = false;
-                            int playerPoints = 0;
-                            int dealerPoints = 0;
-                            bool isDealerTurn = false;
-                            bool doubleDown = false;
-                            //round player
-                            do
-                            {
-                                int[] tempCards = new int[2];
-                                int counter = 0;
-                                //compter les points du joueur
-                                playerPoints = 0;
-                                for (int i = 0; i < placeCardSpot; i++)
+                                if (int.Parse(Deck.Cards[handPlayer[i]].Points) == 1)
                                 {
-                                    if(int.Parse(Deck.Cards[handPlayer[i]].Points) == 1)
-                                    {
-                                        tempCards[counter] = handPlayer[i];
-                                        counter++;
-                                    }
-                                    else
-                                    {
-                                        playerPoints += int.Parse(Deck.Cards[handPlayer[i]].Points);
-                                    }
-                                }
-
-                                int pointTemp = playerPoints + 11;
-
-                                for (int i = 0; i < counter; i++)
-                                {
-                                    if (pointTemp <= 21)
-                                    {
-                                        playerPoints += 11;
-                                    }
-                                    else
-                                    {
-                                        playerPoints += 1;
-                                    }
-                                }
-
-
-                                //affichage du joueur si il ne dépasse pas 21 points
-                                if (playerPoints < 21)
-                                {
-                                    do
-                                    {
-                                        Console.Clear();
-                                        Console.WriteLine(outils.playerInterface(Deck, handPlayer, handDealer, isDealerTurn, blancCard, playerPoints, endRound, dealerPoints));
-                                        uInput = Console.ReadKey().Key;
-                                    } while (uInput != ConsoleKey.Enter && uInput != ConsoleKey.Multiply && (uInput != ConsoleKey.Subtract && uInput != ConsoleKey.OemMinus));
-                                }
-
-
-                                if (playerPoints < 21)
-                                {
-                                    if (uInput == ConsoleKey.Enter)
-                                    {
-                                        //ajouter une carte à la main du joueur
-                                        handPlayer[placeCardSpot] = shuffledDeck[0];
-                                        outils.rearangeDeck(ref shuffledDeck);
-                                        placeCardSpot++;
-                                    }else if (uInput == ConsoleKey.Subtract)
-                                    {
-                                        endRound = true;
-                                    }else if(uInput == ConsoleKey.Multiply)
-                                    {
-                                        if (playerMoney >= bet * 2)
-                                        {
-                                            handPlayer[placeCardSpot] = shuffledDeck[0];
-                                            outils.rearangeDeck(ref shuffledDeck);
-                                            endRound = true;
-                                            doubleDown = true;
-                                        }
-                                        else
-                                        {
-                                            Console.WriteLine("vous n'avez pas assez pour double down !");
-                                        }
-                                    }
-                                }else if(playerPoints == 21)
-                                {
-                                    endRound = true;
+                                    tempCards[counter] = handPlayer[i];
+                                    counter++;
                                 }
                                 else
                                 {
-                                    endRound = true;
+                                    playerPoints += int.Parse(Deck.Cards[handPlayer[i]].Points);
                                 }
+                            }
 
-                            } while (endRound != true);
+                            int pointTemp = playerPoints + 11;
 
-                            Console.Clear();
-                            Console.WriteLine(outils.playerInterface(Deck, handPlayer, handDealer, isDealerTurn, blancCard, playerPoints, endRound, dealerPoints));
-                            Console.ReadKey();
-
-                            isDealerTurn = true;
-                            handDealer[1] = tempHandDealer;
-                            placeCardSpot = 2;
-
-                            //round dealer
-                            do
+                            for (int i = 0; i < counter; i++)
                             {
-                                endRound = false;
-                                //counter les points du dealer
-                                dealerPoints = 0;
-                                for (int i = 0; i < placeCardSpot; i++)
+                                if (pointTemp <= 21)
                                 {
-                                    dealerPoints += int.Parse(Deck.Cards[handDealer[i]].Points);
+                                    playerPoints += 11;
                                 }
-                                //affichage du dealer
-                                Console.Clear();
-                                Console.WriteLine(outils.playerInterface(Deck, handPlayer, handDealer, isDealerTurn, blancCard, playerPoints, endRound, dealerPoints));
-                                Console.ReadKey();
-                                //Thread.Sleep(1000);
-                                if (dealerPoints < 19 && playerPoints <=21 && dealerPoints < playerPoints)
+                                else
                                 {
-                                    //ajouter une carte à la main du dealer
-                                    handDealer[placeCardSpot] = shuffledDeck[0];
+                                    playerPoints += 1;
+                                }
+                            }
+
+
+                            //affichage du joueur si il ne dépasse pas 21 points
+                            if (playerPoints < 21)
+                            {
+                                do
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine(outils.playerInterface(Deck, handPlayer, handDealer, isDealerTurn, blancCard, playerPoints, endRound, dealerPoints));
+                                    uInput = Console.ReadKey().Key;
+                                } while (uInput != ConsoleKey.Enter && uInput != ConsoleKey.Multiply && (uInput != ConsoleKey.Subtract && uInput != ConsoleKey.OemMinus));
+                            }
+
+
+                            if (playerPoints < 21)
+                            {
+                                if (uInput == ConsoleKey.Enter)
+                                {
+                                    //ajouter une carte à la main du joueur
+                                    handPlayer[placeCardSpot] = shuffledDeck[0];
                                     outils.rearangeDeck(ref shuffledDeck);
                                     placeCardSpot++;
                                 }
-                                else
+                                else if (uInput == ConsoleKey.Subtract)
                                 {
                                     endRound = true;
                                 }
-                            } while (!endRound);
-
-                            //Choix du gagnant
-
-                            if (dealerPoints > playerPoints && dealerPoints <21 || playerPoints >21)
-                            {
-                                Console.Clear();
-                                Console.WriteLine("\n\nle dealer à gagné");
-                                playerMoney -= bet;
+                                else if (uInput == ConsoleKey.Multiply)
+                                {
+                                    if (playerMoney >= bet * 2)
+                                    {
+                                        handPlayer[placeCardSpot] = shuffledDeck[0];
+                                        outils.rearangeDeck(ref shuffledDeck);
+                                        endRound = true;
+                                        doubleDown = true;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("vous n'avez pas assez pour double down !");
+                                    }
+                                }
                             }
-                            else if (dealerPoints < playerPoints || dealerPoints > 21)
+                            else if (playerPoints == 21)
                             {
-                                Console.Clear();
-                                Console.WriteLine("\n\nVous avez gagné");
-
-                                if (doubleDown)
-                                {
-                                    playerMoney += bet * 2;
-                                }
-                                else
-                                {
-                                    playerMoney += bet;
-                                }
-                                if(playerPoints == 21)
-                                {
-                                    playerMoney += bet * 1.5;
-                                }
+                                endRound = true;
                             }
                             else
                             {
-                                Console.Clear();
-                                Console.WriteLine("\n\nEgalité. votre somme à été restoré dans votre banque.");
+                                endRound = true;
+                            }
+
+                        } while (endRound != true);
+
+                        Console.Clear();
+                        Console.WriteLine(outils.playerInterface(Deck, handPlayer, handDealer, isDealerTurn, blancCard, playerPoints, endRound, dealerPoints));
+                        Console.ReadKey();
+
+                        isDealerTurn = true;
+                        handDealer[1] = tempHandDealer;
+                        placeCardSpot = 2;
+
+                        //round dealer
+                        do
+                        {
+                            endRound = false;
+                            //counter les points du dealer
+                            dealerPoints = 0;
+                            for (int i = 0; i < placeCardSpot; i++)
+                            {
+                                dealerPoints += int.Parse(Deck.Cards[handDealer[i]].Points);
+                            }
+                            //affichage du dealer
+                            Console.Clear();
+                            Console.WriteLine(outils.playerInterface(Deck, handPlayer, handDealer, isDealerTurn, blancCard, playerPoints, endRound, dealerPoints));
+                            Console.ReadKey();
+                            //Thread.Sleep(1000);
+                            if (dealerPoints < 19 && playerPoints <= 21 && dealerPoints < playerPoints)
+                            {
+                                //ajouter une carte à la main du dealer
+                                handDealer[placeCardSpot] = shuffledDeck[0];
+                                outils.rearangeDeck(ref shuffledDeck);
+                                placeCardSpot++;
+                            }
+                            else
+                            {
+                                endRound = true;
+                            }
+                        } while (!endRound);
+
+                        //Choix du gagnant
+
+                        if (dealerPoints > playerPoints && dealerPoints < 21 || playerPoints > 21)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\nle dealer à gagné");
+                            playerMoney -= bet;
+                        }
+                        else if (dealerPoints < playerPoints || dealerPoints > 21)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\nVous avez gagné");
+
+                            if (doubleDown)
+                            {
+                                playerMoney += bet * 2;
+                            }
+                            else
+                            {
+                                playerMoney += bet;
+                            }
+                            if (playerPoints == 21)
+                            {
+                                playerMoney += bet * 1.5;
                             }
                         }
                         else
                         {
-                            Console.WriteLine("vous n'avez pas assez d'argent. revenez quand vous êtes plus riches");
+                            Console.Clear();
+                            Console.WriteLine("\n\nEgalité. votre somme à été restoré dans votre banque.");
                         }
 
-                            Console.WriteLine("\n\nvoulez vous rejouer une partie ? (Y/N) vous avez : " + playerMoney + "€");
+
+                        Console.WriteLine("\n\nvoulez vous rejouer une partie ? (Y/N) vous avez : " + playerMoney + "€");
+
                     } while ((Console.ReadKey().Key != ConsoleKey.N) && playerMoney > 0);
                 }
             }

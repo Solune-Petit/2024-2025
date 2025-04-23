@@ -37,6 +37,21 @@ function createProject($pdo){
 
 }
 
+function fetchProject($pdo, $projectID){
+    try{
+
+        $query = "SELECT * FROM projet WHERE projetID = $projectID";
+        $fetchProject = $pdo->prepare($query);
+        $fetchProject->execute();
+        $projet = $fetchProject->fetch();
+        $_SESSION["project"] = $projet;
+
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+
 function createCat($pdo){
     try{
         $query = "INSERT INTO categorie (categorieNom, categoriePosition, projetID) VALUES (:categorieNom, :categoriePosition, :projetID)";
@@ -63,6 +78,18 @@ function fetchCat($pdo){
 
         $categories = $fetchCat->fetchAll();
         $_SESSION["categories"] = $categories;
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+
+function deleteCat($pdo, $catID){
+
+    try{
+        $query = "DELETE FROM categorie WHERE categorieID = $catID";
+        $deleteCat = $pdo->prepare($query);
+        $deleteCat->execute();
     }catch(PDOException $e){
         $message = $e->getMessage();
         die($message);

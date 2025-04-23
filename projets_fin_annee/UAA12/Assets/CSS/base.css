@@ -77,9 +77,16 @@ a{
     padding: 20px;
 }
 
+.scrollable {
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    overscroll-behavior-x: auto none;
+}
+
 .cat{
+    flex: 0 0 auto;
     height: 600px;
-    width: 200px;
+    width: 175px;
     border: solid black 2px;
     border-radius: 10px;
     background-color: rgb(71, 188, 218);

@@ -9,10 +9,17 @@ if(isset($_POST["projectSubmit"])){
     header("location:/project?ProjetID=".$_SESSION["project"]->ProjetID);
 }else if(isset($_GET["ProjetID"]) && $uri === "/project?ProjetID=".$_GET["ProjetID"]){
 
+    fetchProject($pdo, $_GET["ProjetID"]);
     fetchCat($pdo);
     
     if(isset($_POST["addCatBtn"])){
         createCat($pdo);
+        header("location:#");
+    }
+    else if($uri.str_contains($uri,"catID") && $uri === "/project?ProjetID=".$_GET["ProjetID"]."?catID=".$_GET["categorieID"])
+    {
+        // deleteCat($pdo, $_GET["categorieID"]);
+        var_dump($_GET["categorieID"]);
         header("location:#");
     }
 
