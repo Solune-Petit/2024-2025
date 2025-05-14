@@ -28,11 +28,22 @@ namespace _5T24_PetitSolune_BlackJack
             return Number;
         }
 
-        public string playerInterface(deck Deck, int[] handPlayer, int[] handDealer, bool isDealerTurn, string[] blancCard, int points, bool endRound, int dealerPoints)
+        public string playerInterface(deck Deck, int[,] handPlayer, int[] handDealer, bool isDealerTurn, string[] blancCard, int[] points, bool endRound, int dealerPoints, int turnPlayer)
         {
             string output = "";
 
             string[][] cardTable = new string[11][];
+
+            string[] space =
+            {
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       ",
+                "       "
+            };
 
             if (!isDealerTurn)
             {
@@ -72,13 +83,25 @@ namespace _5T24_PetitSolune_BlackJack
                         "pour passer au résultat du dealer, appuiez sur n'importe quelle touche\n\n\n";
                 }
 
-                output += "Player :\n           ";
+                output += "Players :\n           ";
 
-                for (int i = 0; i < handPlayer.Length; i++)
+                int temp = 0;
+
+                for (int i = 0; i < handPlayer.GetLength(0); i++)
                 {
-                    if (handPlayer[i] != -1)
+                    for(int j = 0; j < handPlayer.GetLength(1); j++)
                     {
-                        cardTable[i] = Deck.Cards[handPlayer[i]].Image.Split("\r\n");
+                        if (handPlayer[i, j] != -1)
+                        {
+                            cardTable[temp] = Deck.Cards[handPlayer[i, j]].Image.Split("\r\n");
+                            temp++;
+                        }
+
+                        if (j == 10)
+                        {
+                            cardTable[temp] = space;
+                            temp++;
+                        }
                     }
                 }
 
@@ -94,7 +117,12 @@ namespace _5T24_PetitSolune_BlackJack
                     output += "\n           ";
                 }
 
-                output += "\n\n\n vous avez " + points + " points";
+                output += "\n\n\n";
+
+                for (int i = 0; i < handPlayer.GetLength(0); i++)
+                {
+                    output += "Joueur " + (i+1) + ", vous avez " + points[i] + " points \n";
+                }
             }
             else
             {
@@ -130,11 +158,14 @@ namespace _5T24_PetitSolune_BlackJack
 
                 output += "Player :\n           ";
 
-                for (int i = 0; i < handPlayer.Length; i++)
+                for (int i = 0; i < handPlayer.GetLength(1); i++)
                 {
-                    if (handPlayer[i] != -1)
+                    for (int j = 0; j < handPlayer.GetLength(0); j++)
                     {
-                        cardTable[i] = Deck.Cards[handPlayer[i]].Image.Split("\r\n");
+                        if (handPlayer[i, j] != -1)
+                        {
+                            cardTable[i] = Deck.Cards[handPlayer[i, j]].Image.Split("\r\n");
+                        }
                     }
                 }
 
@@ -152,6 +183,8 @@ namespace _5T24_PetitSolune_BlackJack
 
                 output += "\n\n\n vous avez " + points + " points";
             }
+
+            output += "\n\n\n Joueur " + (turnPlayer + 1) + ", c'est à vous de jouer !\n";
 
             return output;
         }

@@ -7,3 +7,5 @@
     require_once("./Controllers/userController.php");
     require_once("./Controllers/projectController.php");
 ?>
+
+<?=var_dump($_SESSION["user"])?>
