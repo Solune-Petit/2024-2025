@@ -2,13 +2,14 @@
 
 require_once("Models/projectModels.php");
 
+
 $uri = $_SERVER["REQUEST_URI"];
 
 if(isset($_POST["projectSubmit"])){
     createProject($pdo);
     header("location:/project?ProjetID=".$_SESSION["project"]->ProjetID);
 }else if(isset($_GET["ProjetID"]) && $uri === "/project?ProjetID=".$_GET["ProjetID"]){
-
+    
     fetchProject($pdo, $_GET["ProjetID"]);
     fetchCat($pdo);
     
@@ -27,8 +28,10 @@ if(isset($_POST["projectSubmit"])){
     $title = "Projet";
     $template = "Views/connected/project.php";
     require_once("Views/base.php");
-}else if (isset($_SESSION["project"]) && $uri === "project?ProjetID=" . $_SESSION["project"]->projetID . "/projectSettings"){
+}else if (isset($_SESSION["project"]) && $uri === "project?ProjetID=" . $_SESSION["project"]->projetID . "?projectSettings" . $_GET["projetSettings"]){
+    var_dump("coucouu");
     $title = "paramètre de" . $_SESSION["projet"]->projetTitle;
+
     $template = "Views/connected/projectSetings.php";
     require_once("Views/base.php");
 }
