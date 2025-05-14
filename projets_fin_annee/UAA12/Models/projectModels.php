@@ -3,7 +3,7 @@
 function createProject($pdo){
 
     try{
-        $query = "INSERT INTO `solune`.`projet` (`ProjetTitle`, `ProjetDescription`, `projetMaker`) VALUES (:ProjetTitle, :ProjetDescription, :projetMaker)";
+        $query = "INSERT INTO `solune`.`projet` (`projetTitle`, `projetDescription`, `projetMaker`) VALUES (:ProjetTitle, :ProjetDescription, :projetMaker)";
         $createProjet = $pdo->prepare($query);
         $createProjet->execute([
             'ProjetTitle' => $_POST['projectTitle'],
@@ -12,7 +12,7 @@ function createProject($pdo){
         ]);
 
         
-        $query = "SELECT * FROM `solune`.`projet` where ProjetTitle = :ProjetTitle and ProjetDescription = :ProjetDescription and projetMaker = :projetMaker";
+        $query = "SELECT * FROM `solune`.`projet` where projetTitle = :ProjetTitle and projetDescription = :ProjetDescription and projetMaker = :projetMaker";
         $fetchProject = $pdo->prepare($query);
         $fetchProject->execute([
             'ProjetTitle' => $_POST['projectTitle'],
@@ -23,7 +23,7 @@ function createProject($pdo){
         $_SESSION["project"] = $projet;
 
 
-        $query = "INSERT INTO solune.userprojet (UserID, ProjetID) VALUES (:UserID, :ProjetID)";
+        $query = "INSERT INTO solune.userprojet (userID, projetID) VALUES (:UserID, :ProjetID)";
         $joinUserProjet = $pdo->prepare($query);
         $joinUserProjet->execute([
             'UserID'=>$_SESSION["user"]->userID,

@@ -4,13 +4,37 @@
             <h1>Voici votre profile</h1>
             <p>Nom : <?= $_SESSION["user"]->userNom ?></p>
             <p>Prenom : <?= $_SESSION["user"]->userPrenom ?></p>
-            <p>Adress Email : <?= $_SESSION["user"]->userMail?></p>
-            <p>Nom d'utillisateur : <?= $_SESSION["user"]->userLogin?></p>
-            <p>Mot de passe : <?php for($i=0;$i<strlen($_SESSION["user"]->userPassword);$i++){
-                echo("*");
-            } ?></p>
+            <p>Adress Email : <?= $_SESSION["user"]->userMail ?></p>
+            <p>Nom d'utillisateur : <?= $_SESSION["user"]->userLogin ?></p>
+            <p>Mot de passe : <?php for ($i = 0; $i < strlen($_SESSION["user"]->userPassword); $i++) {
+                                    echo ("*");
+                                } ?></p>
         </div>
-        <div class="div2 profileDiv" style="display: none;">Div 2</div>
+        <div class="div2 profileDiv" style="display: none;">
+            <form action="" method="post">
+                <div class="input-group">
+                    <label for="registerName">name</label>
+                    <input type="text" id="registerName" name="registerName" required value="<?= $_SESSION["user"]->userNom ?>">
+                </div>
+                <div class="input-group">
+                    <label for="registerSurname">Surname</label>
+                    <input type="text" id="registerSurname" name="registerSurname" required value="<?= $_SESSION["user"]->userPrenom ?>">
+                </div>
+                <div class="input-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" name="registerEmail" required value="<?= $_SESSION["user"]->userMail ?>">
+                </div>
+                <div class="input-group">
+                    <label for="registerLogin">login</label>
+                    <input type="text" id="registerLogin" name="registerLogin" required value="<?= $_SESSION["user"]->userLogin ?>">
+                </div>
+                <div class="input-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required value="<?= $_SESSION["user"]->userPassword ?>">
+                </div>
+                <button type="submit" name="updateProfile" class="btn">Register</button>
+            </form>
+        </div>
     </div>
 
     <button onclick="changeDiv()">Changer votre profile</button>

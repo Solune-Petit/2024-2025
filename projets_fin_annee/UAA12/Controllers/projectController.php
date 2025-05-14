@@ -27,6 +27,10 @@ if(isset($_POST["projectSubmit"])){
     $title = "Projet";
     $template = "Views/connected/project.php";
     require_once("Views/base.php");
+}else if ($uri === "project?ProjetID=" . $_SESSION["project"]->projetID . "/projectSettings"){
+    $title = "paramètre de" . $_SESSION["projet"]->projetTitle;
+    $template = "Views/connected/projectSetings.php";
+    require_once("Views/base.php");
 }
 
 ?>

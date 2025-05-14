@@ -27,6 +27,12 @@ if ($uri === '/LogIn-Off' ){
     logOutUser($pdo);
     header('Location: /');
 }else if ($uri === '/Profile'){
+
+    if(isset($_POST["updateProfile"])){
+        updateProfile($pdo);
+    }
+
+
     $title = "Profile";
     $template = "Views\Users\profile.php";
     require_once("Views/base.php");
