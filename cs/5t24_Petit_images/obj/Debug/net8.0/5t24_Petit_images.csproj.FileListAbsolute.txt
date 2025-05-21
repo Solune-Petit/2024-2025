@@ -1,0 +1,15 @@
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.AssemblyInfoInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.AssemblyInfo.cs
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.csproj.CoreCompileInputs.cache
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.sourcelink.json
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.dll
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\bin\Debug\net8.0\5t24_Petit_images.exe
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\bin\Debug\net8.0\5t24_Petit_images.deps.json
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\bin\Debug\net8.0\5t24_Petit_images.runtimeconfig.json
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\bin\Debug\net8.0\5t24_Petit_images.dll
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\bin\Debug\net8.0\5t24_Petit_images.pdb
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\refint\5t24_Petit_images.dll
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\5t24_Petit_images.genruntimeconfig.cache
+C:\Users\petit\Desktop\ecole\2024-2025\cs\5t24_Petit_images\obj\Debug\net8.0\ref\5t24_Petit_images.dll

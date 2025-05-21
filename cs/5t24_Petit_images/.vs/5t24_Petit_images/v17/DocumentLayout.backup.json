@@ -1,0 +1,55 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\5t24_Petit_images\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18293524-C520-47AC-AA91-9760FDFBA3E2}|5t24_Petit_images.csproj|c:\\users\\petit\\desktop\\ecole\\2024-2025\\cs\\5t24_petit_images\\fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18293524-C520-47AC-AA91-9760FDFBA3E2}|5t24_Petit_images.csproj|solutionrelative:fonctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18293524-C520-47AC-AA91-9760FDFBA3E2}|5t24_Petit_images.csproj|c:\\users\\petit\\desktop\\ecole\\2024-2025\\cs\\5t24_petit_images\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18293524-C520-47AC-AA91-9760FDFBA3E2}|5t24_Petit_images.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\5t24_Petit_images\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\5t24_Petit_images\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAADwv2sAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:19:33.606Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fonctions.cs",
+              "DocumentMoniker": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\5t24_Petit_images\\fonctions.cs",
+              "RelativeDocumentMoniker": "fonctions.cs",
+              "ToolTip": "C:\\Users\\petit\\Desktop\\ecole\\2024-2025\\cs\\5t24_Petit_images\\fonctions.cs*",
+              "RelativeToolTip": "fonctions.cs*",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAowJgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:44:31.262Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

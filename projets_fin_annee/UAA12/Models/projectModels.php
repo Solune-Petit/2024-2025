@@ -70,7 +70,7 @@ function createCat($pdo){
 
 function fetchCat($pdo){
     try{
-        $query = "SELECT * FROM categorie WHERE projetID = :projetID ORDER BY projetID";
+        $query = "SELECT * FROM categorie WHERE projetID = :projetID ORDER BY categoriePosition";
         $fetchCat = $pdo->prepare($query);
         $fetchCat->execute([
             'projetID' => $_SESSION["project"]->projetID
@@ -86,10 +86,50 @@ function fetchCat($pdo){
 
 function deleteCat($pdo, $catID){
 
+
     try{
-        $query = "DELETE FROM categorie WHERE categorieID = $catID";
+        $query = "DELETE FROM categorie WHERE categorieID = :categorieID";
         $deleteCat = $pdo->prepare($query);
-        $deleteCat->execute();
+        $deleteCat->execute([
+            ":categorieID" => $catID
+        ]);
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+
+function switchCatPos($pdo){
+    
+    try{
+        $query = "SELECT categorieID, categoriePosition from categorie where (categoriePosition = :echange and projetID = :projetID)";
+        $switchCat = $pdo->prepare($query);
+        $switchCat->execute([
+            ":echange"=>$_POST["place"],
+            ":projetID"=>$_SESSION["project"]->projetID,
+        ]);
+
+        $temp = $switchCat->fetch();
+
+        $query = "UPDATE categorie SET categoriePosition = :echange where categorieID = :categorieID ";
+        $switchCat = $pdo->prepare($query);
+        $switchCat->execute([
+            ":echange"=>$_POST["categoriePosition"],
+            ":categorieID"=>$temp->categorieID
+        ]);
+
+        $query = "UPDATE categorie SET categoriePosition = :echangeur WHERE categorieID = :categorieID;";
+        $switchCat = $pdo->prepare($query);
+        $switchCat->execute([
+            ":echangeur"=>$_POST["place"],
+            ":categorieID"=>$_POST["catID"]
+        ]);
+
+        /////////////////////////
+        //pour moi du futur, faut faire en sorte que le truc qu'on veut bouger bouges de place. il reste que lui à bouger
+
+
+        fetchCat($pdo);
     }catch(PDOException $e){
         $message = $e->getMessage();
         die($message);

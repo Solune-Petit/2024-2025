@@ -99,3 +99,14 @@ a{
     border: solid black 2px;
     border-radius: 10px;
 }
+
+
+
+
+.wide{
+    width: 100%;
+}
+
+.hidden{
+    display: none;
+}

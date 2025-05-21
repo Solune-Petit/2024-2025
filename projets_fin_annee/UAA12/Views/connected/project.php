@@ -1,51 +1,54 @@
-<div class="flexible space-around" style="width: 100%; margin: 10px;">
-    <div class="projectLeft flex-column space-between align-item-center">
-        <div class="flexible space-between scrollable">
-            <?php foreach ($_SESSION["categories"] as $cat): ?>
+<div class="flex-column align-item-center" style="width: 100%; margin: 10px;">
+    <h1>Nom du projet : <?= $_SESSION["project"]->projetTitle ?></h1>
+    <div class="flexible space-around" style="width: 100%; margin: 10px;">
+        <div class="projectLeft flex-column space-between align-item-center">
+            <div class="flexible space-between scrollable">
+                <?php foreach ($_SESSION["categories"] as $cat): ?>
 
-                <div class="cat">
-                    <form class="flex-column align-item-center" action="" method="post">
-                        <h1><?= $cat->categorieNom ?></h1>
-                        <div class="div2_1">
-                            <button type="button" onclick="changeDiv2()">modifier</button>
-                        </div>
-                        <div class="div2_2" style="display: none">
-                            <div class="flex-column align-item-center">
-                                <button type="button" onclick="changeDiv2()">annuler</button>
-                                <form action="" method="post">
-                                    <label for="place">échanger avec :</label>
-                                    <input type="number" name="place" id="place" placeholder="<?= $cat->categoriePosition ?>" style="width: 35px;">
-                                    <input type="submit" name="changePlace" id="changePlace">
-                                </form>
-                                <a href="/project?ProjetID=<?= $project->projetID ?>?catID=<?= $cat->categorieID?>">supprimer la catégorie</a>
+                    <div class="cat">
+                        <form class="flex-column align-item-center" action="" method="post">
+                            <h1><?= $cat->categorieNom ?></h1>
+                            <div class="div2_1">
+                                <button type="button" onclick="changeDiv2()">modifier</button>
                             </div>
-                        </div>
+                            <div class="div2_2" style="display: none">
+                                <div class="flex-column align-item-center">
+                                    <button type="button" onclick="changeDiv2()">annuler</button>
+                                    <form action="" method="post">
+                                        <label for="place">échanger avec :</label>
+                                        <input type="number" name="place" id="place" placeholder="<?= $cat->categoriePosition ?>" style="width: 35px;">
+                                        <input type="submit" name="changePlace" id="changePlace">
+                                        <input class="hidden" type="numbre" name="categoriePosition" id="categoriePosition" value="<?= $cat->categoriePosition ?>">
+                                    </form>
+                                    <a href="/project?ProjetID=<?= $project->projetID ?>&catID=<?= $cat->categorieID ?>">supprimer la catégorie</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                <?php endforeach ?>
+
+            </div>
+
+            <div class="flexible">
+                <div class="div1 profileDiv">
+                    <button onclick="changeDiv()">ajouter une catégorie</button>
+                </div>
+                <div class="div2" style="display: none; margin:30px;">
+                    <button onclick="changeDiv()">annuler</button>
+                    <form action="" method="post" class="flex-column align-item-center">
+                        <label for="catName">Nom de la catégorie</label>
+                        <input type="text" name="catName" id="catName" required>
+                        <button type="submit" name="addCatBtn" id="addCatBtn">valider</button>
                     </form>
                 </div>
-
-            <?php endforeach ?>
-
-        </div>
-
-        <div class="flexible">
-            <div class="div1 profileDiv">
-                <button onclick="changeDiv()">ajouter une catégorie</button>
-            </div>
-            <div class="div2" style="display: none; margin:30px;">
-                <button onclick="changeDiv()">annuler</button>
-                <form action="" method="post" class="flex-column align-item-center">
-                    <label for="catName">Nom de la catégorie</label>
-                    <input type="text" name="catName" id="catName" required>
-                    <button type="submit" name="addCatBtn" id="addCatBtn">valider</button>
-                </form>
             </div>
         </div>
-    </div>
 
-    <div class="projectRight">
-        <?php if (isset($_POST["moveBack"])) {
-            var_dump($cat);
-        } ?>
+        <div class="projectRight">
+            <?php if (isset($_POST["moveBack"])) {
+            } ?>
+        </div>
     </div>
 </div>
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("manip_matrice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09d82416f82fe08e526108904b666c4489745764")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+017beadb5d31c194008fe81cb30c43b295961052")]
 [assembly: System.Reflection.AssemblyProductAttribute("manip_matrice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("manip_matrice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

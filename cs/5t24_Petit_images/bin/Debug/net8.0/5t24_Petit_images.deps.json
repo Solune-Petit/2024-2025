@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "5t24_Petit_images/1.0.0": {
+        "runtime": {
+          "5t24_Petit_images.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "5t24_Petit_images/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
