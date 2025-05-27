@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("5t24_Petit_images")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+017beadb5d31c194008fe81cb30c43b295961052")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff685498e293dcdc1e63b882bdc10e2b19ff4f78")]
 [assembly: System.Reflection.AssemblyProductAttribute("5t24_Petit_images")]
 [assembly: System.Reflection.AssemblyTitleAttribute("5t24_Petit_images")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

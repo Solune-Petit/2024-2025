@@ -28,11 +28,11 @@ namespace _5T24_PetitSolune_BlackJack
             return Number;
         }
 
-        public string playerInterface(deck Deck, int[,] handPlayer, int[] handDealer, bool isDealerTurn, string[] blancCard, int[] points, bool endRound, int dealerPoints, int turnPlayer)
+        public string playerInterface(deck Deck, int[,] handPlayer, int[] handDealer, bool isDealerTurn, string[] blancCard, int[] points, bool endRound, int dealerPoints, int turnPlayer, int nbPlayer)
         {
             string output = "";
 
-            string[][] cardTable = new string[11][];
+            string[][] cardTable = new string[(11 * nbPlayer) + 2][];
 
             string[] space =
             {
@@ -48,7 +48,9 @@ namespace _5T24_PetitSolune_BlackJack
             if (!isDealerTurn)
             {
 
-                output = "Dealer :\n           ";
+                output += "             Joueur " + (turnPlayer + 1) + ", c'est à vous de jouer !\n\n\n\n";
+
+                output += "Dealer :\n           ";
 
                 cardTable[0] = Deck.Cards[handDealer[0]].Image.Split("\r\n");
                 cardTable[1] = blancCard;
@@ -80,7 +82,7 @@ namespace _5T24_PetitSolune_BlackJack
                     output += "\n" +
                         "voici vos options :\n" +
                         "vous ne pouvez plus jouer\n" +
-                        "pour passer au résultat du dealer, appuiez sur n'importe quelle touche\n\n\n";
+                        "pour passer à l'étappe suivante, appuiez sur n'importe quelle touche\n\n\n";
                 }
 
                 output += "Players :\n           ";
@@ -156,15 +158,24 @@ namespace _5T24_PetitSolune_BlackJack
 
                 cardTable = new string[11][];
 
-                output += "Player :\n           ";
+                output += "Players :\n           ";
 
-                for (int i = 0; i < handPlayer.GetLength(1); i++)
+                int temp = 0;
+
+                for (int i = 0; i < handPlayer.GetLength(0); i++)
                 {
-                    for (int j = 0; j < handPlayer.GetLength(0); j++)
+                    for (int j = 0; j < handPlayer.GetLength(1); j++)
                     {
                         if (handPlayer[i, j] != -1)
                         {
-                            cardTable[i] = Deck.Cards[handPlayer[i, j]].Image.Split("\r\n");
+                            cardTable[temp] = Deck.Cards[handPlayer[i, j]].Image.Split("\r\n");
+                            temp++;
+                        }
+
+                        if (j == 10)
+                        {
+                            cardTable[temp] = space;
+                            temp++;
                         }
                     }
                 }
@@ -181,10 +192,14 @@ namespace _5T24_PetitSolune_BlackJack
                     output += "\n           ";
                 }
 
-                output += "\n\n\n vous avez " + points + " points";
+                output += "\n\n\n";
+
+                for (int i = 0; i < handPlayer.GetLength(0); i++)
+                {
+                    output += "Joueur " + (i + 1) + ", vous avez " + points[i] + " points \n";
+                }
             }
 
-            output += "\n\n\n Joueur " + (turnPlayer + 1) + ", c'est à vous de jouer !\n";
 
             return output;
         }
@@ -213,6 +228,48 @@ namespace _5T24_PetitSolune_BlackJack
                 shuffledDeck[i] = shuffledDeck[i + 1];
             }
             shuffledDeck[shuffledDeck.Length - 1] = temp;
+        }
+
+        public void countPoints(deck Deck,int playerTurn, int nbPlayers, ref int[] playersPoints, int[] playerPlaceSpot, int[,] players)
+        {
+            int[] tempCards = new int[2];
+            int[] counter = new int[nbPlayers];
+
+            playersPoints = new int[nbPlayers];
+
+            for (int i = 0; i < nbPlayers; i++)
+            {
+                for (int j = 0; j < playerPlaceSpot[i]; j++)
+                {
+                    if (int.Parse(Deck.Cards[players[i, j]].Points) == 1)
+                    {
+                        tempCards[counter[i]] = players[i, j];
+                        counter[i]++;
+                    }
+                    else
+                    {
+                        playersPoints[i] += int.Parse(Deck.Cards[players[i, j]].Points);
+                    }
+                }
+            }
+
+
+            for (int i = 0; i < playersPoints.Length; i++)
+            {
+                for (int j = 0; j < counter[i]; j++)
+                {
+                    int pointTemp = playersPoints[i] + 11;
+
+                    if (pointTemp <= 21)
+                    {
+                        playersPoints[i] += 11;
+                    }
+                    else
+                    {
+                        playersPoints[i] += 1;
+                    }
+                }
+            }
         }
     }
 }
