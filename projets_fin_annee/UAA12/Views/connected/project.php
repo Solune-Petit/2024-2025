@@ -1,8 +1,8 @@
 <div class="flex-column align-item-center" style="width: 100%; margin: 10px;">
     <h1>Nom du projet : <?= $_SESSION["project"]->projetTitle ?></h1>
     <div class="flexible space-around" style="width: 100%; margin: 10px;">
-        <div class="projectLeft flex-column space-between align-item-center">
-            <div class="flexible space-between scrollable">
+        <div class="projectLeft flex-column space-between align-item-center scrollable">
+            <div class="flexible space-between ">
                 <?php foreach ($_SESSION["categories"] as $cat): ?>
 
                     <div class="cat">
@@ -16,12 +16,32 @@
                                     <button type="button" onclick="changeDiv2()">annuler</button>
                                     <form action="" method="post">
                                         <label for="place">échanger avec :</label>
-                                        <input type="number" name="place" id="place" placeholder="<?= $cat->categoriePosition ?>" style="width: 35px;">
+                                        <input type="number" name="place" id="place" placeholder="<?= $cat->categoriePosition ?>" style="width: 35px;" required>
                                         <input type="submit" name="changePlace" id="changePlace">
                                         <input class="hidden" type="numbre" name="categoriePosition" id="categoriePosition" value="<?= $cat->categoriePosition ?>">
+                                        <input class="hidden" type="numbre" name="categorieID" id="categorieID" value="<?= $cat->categorieID ?>">
                                     </form>
                                     <a href="/project?ProjetID=<?= $project->projetID ?>&catID=<?= $cat->categorieID ?>">supprimer la catégorie</a>
                                 </div>
+                            </div>
+                            <div class="flex-column align-item-center">
+                                <?php foreach ($_SESSION["AllCards"] as $card) :
+                                    if ($card->categorieID === $cat->categorieID) : ?>
+                                        <div class="card flex-column align-item-center">
+
+                                            <h1><?= $card->carteNom ?></h1>
+                                            <p><?= $card->carteDescription ?></p>
+
+                                        </div>
+                                <?php endif;
+                                endforeach ?>
+                            <div class="div3_1">
+                                <button type="button" onclick="changeDiv3()">ajouter une carte</button>
+                            </div>
+                            <div class="div3_2" style="display: none;">
+                                coucou
+                                <button type="button" onclick="changeDiv3()">annuler</button>
+                            </div>
                             </div>
                         </form>
                     </div>
@@ -74,53 +94,70 @@
             currentDiv = 1;
         }
     }
-    // Vérification de l'état initial des divs au chargement de la page
-    window.onload = function() {
-        if (document.querySelector(".div2").style.display === "block") {
-            currentDiv = 2;
-        }
-    };
-
-
-
+    
+    
+    
     let currentDiv2 = 1;
-
+    
     function changeDiv2() {
         const div2_1 = document.querySelectorAll(".div2_1");
         const div2_2 = document.querySelectorAll(".div2_2");
-
+        
         div2_1.forEach(div2_1 => {
             if (currentDiv2 === 1) {
                 div2_1.style.display = "none";
             } else {
                 div2_1.style.display = "block";
             }
-
+            
         });
-
+        
         div2_2.forEach(div2_2 => {
             if (currentDiv2 === 1) {
                 div2_2.style.display = "block";
             } else {
                 div2_2.style.display = "none";
             }
-
+            
         });
-
+        
         if (currentDiv2 == 1) {
             currentDiv2 = 2;
         } else {
             currentDiv2 = 1;
         }
-
-
+        
+        
+    };
+    
+    let currentDiv3 = 1;
+    
+    function changeDiv3() {
+        const container = document.getElementById("container");
+        const div3_1 = document.querySelector(".div3_1");
+        const div3_2 = document.querySelector(".div3_2");
+        
+        if (currentDiv3 === 1) {
+            div3_1.style.display = "none";
+            div3_2.style.display = "block";
+            currentDiv3 = 2;
+        } else {
+            div3_2.style.display = "none";
+            div3_1.style.display = "block";
+            currentDiv3 = 1;
+        }
     }
-
-
+    
     // Vérification de l'état initial des divs au chargement de la page
     window.onload = function() {
+        if (document.querySelector(".div2").style.display === "block") {
+            currentDiv = 2;
+        }
         if (document.querySelector(".div2_2").style.display === "block") {
             currentDiv2 = 2;
+        }
+        if (document.querySelector(".div3_2").style.display === "block") {
+            currentDiv3 = 2;
         }
     };
 </script>

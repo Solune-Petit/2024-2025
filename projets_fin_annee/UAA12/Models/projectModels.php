@@ -105,28 +105,28 @@ function switchCatPos($pdo){
         $query = "SELECT categorieID, categoriePosition from categorie where (categoriePosition = :echange and projetID = :projetID)";
         $switchCat = $pdo->prepare($query);
         $switchCat->execute([
-            ":echange"=>$_POST["place"],
-            ":projetID"=>$_SESSION["project"]->projetID,
+            "echange"=>$_POST["place"],
+            "projetID"=>$_SESSION["project"]->projetID,
         ]);
 
         $temp = $switchCat->fetch();
-
-        $query = "UPDATE categorie SET categoriePosition = :echange where categorieID = :categorieID ";
-        $switchCat = $pdo->prepare($query);
-        $switchCat->execute([
-            ":echange"=>$_POST["categoriePosition"],
-            ":categorieID"=>$temp->categorieID
-        ]);
-
+        
         $query = "UPDATE categorie SET categoriePosition = :echangeur WHERE categorieID = :categorieID;";
         $switchCat = $pdo->prepare($query);
         $switchCat->execute([
-            ":echangeur"=>$_POST["place"],
-            ":categorieID"=>$_POST["catID"]
+            "echangeur"=>$_POST["place"],
+            "categorieID"=>$_POST["categorieID"]
         ]);
 
-        /////////////////////////
-        //pour moi du futur, faut faire en sorte que le truc qu'on veut bouger bouges de place. il reste que lui à bouger
+        if ($temp != null){
+            
+            $query = "UPDATE categorie SET categoriePosition = :echange where categorieID = :categorieID ";
+            $switchCat = $pdo->prepare($query);
+            $switchCat->execute([
+                "echange"=>$_POST["categoriePosition"],
+                "categorieID"=>$temp->categorieID
+            ]);
+        }
 
 
         fetchCat($pdo);
@@ -134,4 +134,19 @@ function switchCatPos($pdo){
         $message = $e->getMessage();
         die($message);
     }
+}
+
+function fetchCard($pdo){
+
+    try{
+        $query = "SELECT * from carte";
+        $fetchAllCards = $pdo->prepare($query);
+        $fetchAllCards->execute([]);
+        $_SESSION["AllCards"] = $fetchAllCards->fetchAll();
+
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
+    }
+
 }

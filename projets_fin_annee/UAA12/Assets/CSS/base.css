@@ -74,13 +74,12 @@ a{
     width: 40%;
     border: solid black 2px;
     border-radius: 10px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .scrollable {
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
-    overscroll-behavior-x: auto none;
 }
 
 .cat{
@@ -92,6 +91,10 @@ a{
     background-color: rgb(71, 188, 218);
 }
 
+.cat>*{
+    font-size: auto;
+}
+
 
 .projectRight{
     width: 40%;
@@ -100,7 +103,18 @@ a{
     border-radius: 10px;
 }
 
+.card{
+    margin: 5px;
+    width: 90%;
+    height: min-content;
+    background-color: brown;
+    border: 2px solid black;
+    border-radius: 10px;
+}
 
+.card>*{
+    margin: 0;
+}
 
 
 .wide{

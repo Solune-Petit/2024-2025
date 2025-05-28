@@ -14,6 +14,7 @@ if(isset($_POST["projectSubmit"])){
 
     fetchProject($pdo, $_GET["ProjetID"]);
     fetchCat($pdo);
+    fetchCard($pdo);
     
     if(isset($_POST["addCatBtn"])){
         createCat($pdo);
@@ -31,10 +32,10 @@ if(isset($_POST["projectSubmit"])){
 else if(($uri.str_contains($uri,"catID") == true) && $uri === "/project?ProjetID=".$_GET["ProjetID"]."&catID=".$_GET["catID"])
 {
     
-    var_dump("coucou");
     
     deleteCat($pdo, $_GET["catID"]);
     header("location:/project?ProjetID=".$_SESSION["project"]->projetID);
+    var_dump("coucou");
 }
 // }else if (isset($_SESSION["project"]) && $uri === "project?ProjetID=" . $_SESSION["project"]->projetID . "?projectSettings" . $_GET["projetSettings"]){
 //     var_dump("coucouu");
