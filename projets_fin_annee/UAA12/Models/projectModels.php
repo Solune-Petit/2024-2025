@@ -86,7 +86,7 @@ function fetchCat($pdo){
 
 function deleteCat($pdo, $catID){
 
-
+    
     try{
         $query = "DELETE FROM categorie WHERE categorieID = :categorieID";
         $deleteCat = $pdo->prepare($query);
@@ -144,6 +144,36 @@ function fetchCard($pdo){
         $fetchAllCards->execute([]);
         $_SESSION["AllCards"] = $fetchAllCards->fetchAll();
 
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
+    }
+
+}
+
+function addCard($pdo){
+    try{
+        $query = "INSERT INTO carte (carteNom, carteDescription, categorieID) VALUES (:carteNom, :carteDescription, :categorieID)";
+        $addcard = $pdo->prepare($query);
+        $addcard->execute([
+            "carteNom"=>$_POST["cardName"],
+            "carteDescription"=>$_POST["cardDescription"],
+            "categorieID"=>$_POST["categorieID"],
+        ]);
+    }catch(PDOException $e){
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+
+function switchCard($pdo){
+    try{
+        $query = "UPDATE carte SET categorieID = :newPos WHERE carteID = :cardID";
+        $switchcard = $pdo->prepare($query);
+        $switchcard->execute([
+            "newPos"=>$_POST["categorie"],
+            "cardID"=>$_POST["cardID"]
+            ]);
     }catch(PDOException $e){
         $message = $e->getMessage();
         die($message);

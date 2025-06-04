@@ -22,6 +22,11 @@ if(isset($_POST["projectSubmit"])){
     }else if (isset($_POST["changePlace"])){
         switchCatPos($pdo);
         // header("location:#");
+    }else if (isset($_POST["cardName"])){
+        addCard($pdo);
+        header("location:#");
+    }else if (isset($_POST["switchCard"])){
+        switchCard($pdo);
     }
     
     
@@ -29,19 +34,19 @@ if(isset($_POST["projectSubmit"])){
     $template = "Views/connected/project.php";
     require_once("Views/base.php");
 }
-else if(($uri.str_contains($uri,"catID") == true) && $uri === "/project?ProjetID=".$_GET["ProjetID"]."&catID=".$_GET["catID"])
+else if(str_contains($uri,"catID"))
 {
+    var_dump("coucou");
     
     
     deleteCat($pdo, $_GET["catID"]);
     header("location:/project?ProjetID=".$_SESSION["project"]->projetID);
     var_dump("coucou");
 }
-// }else if (isset($_SESSION["project"]) && $uri === "project?ProjetID=" . $_SESSION["project"]->projetID . "?projectSettings" . $_GET["projetSettings"]){
-//     var_dump("coucouu");
-//     $title = "paramètre de" . $_SESSION["projet"]->projetTitle;
-
-//     $template = "Views/connected/projectSetings.php";
-//     require_once("Views/base.php");
-// }
+else if (isset($_SESSION["project"]) && $uri === "/project/projectSettings?ProjetID=" . $_SESSION["project"]->projetID){
+    
+    $title = "paramètre de \"" . $_SESSION["project"]->projetTitle . "\"";
+    $template = "Views/connected/projectSettings.php";
+    require_once("Views/base.php");
+}
 ?>

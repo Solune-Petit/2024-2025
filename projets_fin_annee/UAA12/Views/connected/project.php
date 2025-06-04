@@ -31,20 +31,42 @@
 
                                             <h1><?= $card->carteNom ?></h1>
                                             <p><?= $card->carteDescription ?></p>
+                                            <div class="div2_1">
+                                                <button type="button" onclick="changeDiv2()">modifier</button>
+                                            </div>
+                                            <div class="div2_2" style="display: none">
+                                                <div class="flex-column align-item-center">
+                                                    <button type="button" onclick="changeDiv2()">annuler</button>
+                                                    <form action="" method="post">
+                                                        <label for="place">déplacer la carte dans :</label>
+                                                        <select name="categorie" id="categorie" style="width: 90px;">
+                                                            <?php foreach ($_SESSION["categories"] as $cate) : ?>
 
+                                                                <option value="<?=$cate->categorieID?>" <?php if($cate->categorieID == $card->categorieID) :?> selected <?php endif?>><?=$cate->categorieNom?></option>
+
+                                                            <?php endforeach?>
+                                                        </select>
+                                                        <input type="submit" name="switchCard" id="switchCard">
+                                                        <input class="hidden" type="numbre" name="cardID" id="cardID" value="<?= $card->cardID ?>">
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                 <?php endif;
                                 endforeach ?>
-                            <div class="div3_1">
-                                <button type="button" onclick="changeDiv3()">ajouter une carte</button>
                             </div>
-                            <div class="div3_2" style="display: none;">
-                                coucou
-                                <button type="button" onclick="changeDiv3()">annuler</button>
-                            </div>
-                            </div>
+
+                            <form method="post">
+                                <label>ajouter une carte</label>
+                                <input type="text" name="cardName" id="cardName" placeholder="nom de la carte" required>
+                                <input type="text" name="cardDescription" id="cardDescription" placeholder="description de la carte" required>
+                                <input class="hidden" type="numbre" name="categorieID" id="categorieID" value="<?= $cat->categorieID ?>">
+                                <input type="submit" id="addCard" name="addCard">
+                            </form>
                         </form>
                     </div>
+
+
 
                 <?php endforeach ?>
 
@@ -66,8 +88,7 @@
         </div>
 
         <div class="projectRight">
-            <?php if (isset($_POST["moveBack"])) {
-            } ?>
+            <h1>en construction</h1>
         </div>
     </div>
 </div>
@@ -94,49 +115,48 @@
             currentDiv = 1;
         }
     }
-    
-    
-    
+
+
+
     let currentDiv2 = 1;
-    
+
     function changeDiv2() {
         const div2_1 = document.querySelectorAll(".div2_1");
         const div2_2 = document.querySelectorAll(".div2_2");
-        
+
         div2_1.forEach(div2_1 => {
             if (currentDiv2 === 1) {
                 div2_1.style.display = "none";
             } else {
                 div2_1.style.display = "block";
             }
-            
+
         });
-        
+
         div2_2.forEach(div2_2 => {
             if (currentDiv2 === 1) {
                 div2_2.style.display = "block";
             } else {
                 div2_2.style.display = "none";
             }
-            
+
         });
-        
+
         if (currentDiv2 == 1) {
             currentDiv2 = 2;
         } else {
             currentDiv2 = 1;
         }
-        
-        
+
+
     };
-    
+
     let currentDiv3 = 1;
-    
+
     function changeDiv3() {
-        const container = document.getElementById("container");
         const div3_1 = document.querySelector(".div3_1");
         const div3_2 = document.querySelector(".div3_2");
-        
+
         if (currentDiv3 === 1) {
             div3_1.style.display = "none";
             div3_2.style.display = "block";
@@ -146,8 +166,10 @@
             div3_1.style.display = "block";
             currentDiv3 = 1;
         }
+
+
     }
-    
+
     // Vérification de l'état initial des divs au chargement de la page
     window.onload = function() {
         if (document.querySelector(".div2").style.display === "block") {
