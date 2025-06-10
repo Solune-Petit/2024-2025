@@ -27,6 +27,7 @@ if(isset($_POST["projectSubmit"])){
         header("location:#");
     }else if (isset($_POST["switchCard"])){
         switchCard($pdo);
+        header("location:#");
     }
     
     
@@ -34,19 +35,33 @@ if(isset($_POST["projectSubmit"])){
     $template = "Views/connected/project.php";
     require_once("Views/base.php");
 }
+else if(str_contains($uri,"cardID")){
+    deleteCard($pdo, $_GET["cardID"]);
+    header("location:/project?ProjetID=".$_SESSION["project"]->projetID);
+}
 else if(str_contains($uri,"catID"))
 {
-    var_dump("coucou");
-    
     
     deleteCat($pdo, $_GET["catID"]);
     header("location:/project?ProjetID=".$_SESSION["project"]->projetID);
     var_dump("coucou");
 }
-else if (isset($_SESSION["project"]) && $uri === "/project/projectSettings?ProjetID=" . $_SESSION["project"]->projetID){
+else if (isset($_SESSION["project"]) && $uri === "/projectSettings?ProjetID=" . $_SESSION["project"]->projetID){
     
-    $title = "paramètre de \"" . $_SESSION["project"]->projetTitle . "\"";
+    fetchAllUserOfProject($pdo, $_GET["ProjetID"]);
+
+    if(isset($_POST["AddUserProject"])){
+        AddUserProject($pdo, $_POST["Email"], $_GET["ProjetID"]);
+        header("location:#");
+    }
+
+    $title = "options du projet";
     $template = "Views/connected/projectSettings.php";
     require_once("Views/base.php");
+}else if (str_contains($uri,"UserToDel")){
+
+    var_dump("coucou");
+    delUserProject($pdo, $_GET["UserToDel"], $_GET["ProjectID"]);
+    header("location:/projectSettings?ProjetID=" . $_SESSION["project"]->projetID);
 }
 ?>

@@ -32,7 +32,7 @@
                     <label for="registerPassword">Password</label>
                     <input type="password" id="registerPassword" name="registerPassword" required value="<?= $_SESSION["user"]->userPassword ?>">
                 </div>
-                <button type="submit" name="updateProfile" class="btn">Register</button>
+                <button type="submit" name="updateProfile" class="btn">changer votre profile</button>
             </form>
         </div>
     </div>

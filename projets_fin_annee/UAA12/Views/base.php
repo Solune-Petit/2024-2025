@@ -23,12 +23,12 @@
             ?>
         </div>
     <?php endif; ?>
-    <div <?php if (isset($_SESSION["user"])) : ?>style="margin-left: 300px;" <?php endif?>>
+    <div <?php if (isset($_SESSION["user"])) : ?>style="margin-left: 320px;" <?php endif ?>>
         <header class="flexible space-between align-item-center">
             <?php require_once("Views/components/header.php") ?>
         </header>
         <main class="flexible justify-content-center">
-            <?= require_once($template) ?>
+            <?php require_once($template) ?>
         </main>
         <footer>
             <?php require_once("Views/components/footer.php") ?>

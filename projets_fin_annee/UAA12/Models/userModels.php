@@ -40,8 +40,7 @@ function connectUser($pdo)
                 'userLogin' => $_POST['loginUsername'],
                 'userPassword' => $_POST['loginPassword'],
             ]);
-        }else
-        {
+        } else {
             $connection->execute([
                 'userLogin' => $_POST['registerLogin'],
                 'userPassword' => $_POST['registerPassword'],
@@ -112,3 +111,4 @@ function updateProfile($pdo)
 
     connectUser($pdo);
 }
+

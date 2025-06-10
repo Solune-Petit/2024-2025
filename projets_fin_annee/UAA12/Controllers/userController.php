@@ -25,7 +25,7 @@ if ($uri === '/LogIn-Off' ){
     require_once("Views/base.php");
 }else if ($uri === '/disconnect'){
     logOutUser($pdo);
-    header('Location: /');
+    header('Location:/');
 }else if ($uri === '/Profile'){
 
     if(isset($_POST["updateProfile"])){

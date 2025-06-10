@@ -1,9 +1,14 @@
+<?php
+$count = 0;
+?>
+
 <div class="flex-column align-item-center" style="width: 100%; margin: 10px;">
     <h1>Nom du projet : <?= $_SESSION["project"]->projetTitle ?></h1>
     <div class="flexible space-around" style="width: 100%; margin: 10px;">
         <div class="projectLeft flex-column space-between align-item-center scrollable">
             <div class="flexible space-between ">
-                <?php foreach ($_SESSION["categories"] as $cat): ?>
+                <?php foreach ($_SESSION["categories"] as $cat):
+                    $count++; ?>
 
                     <div class="cat">
                         <form class="flex-column align-item-center" action="" method="post">
@@ -21,12 +26,13 @@
                                         <input class="hidden" type="numbre" name="categoriePosition" id="categoriePosition" value="<?= $cat->categoriePosition ?>">
                                         <input class="hidden" type="numbre" name="categorieID" id="categorieID" value="<?= $cat->categorieID ?>">
                                     </form>
-                                    <a href="/project?ProjetID=<?= $project->projetID ?>&catID=<?= $cat->categorieID ?>">supprimer la catégorie</a>
                                 </div>
                             </div>
                             <div class="flex-column align-item-center">
                                 <?php foreach ($_SESSION["AllCards"] as $card) :
-                                    if ($card->categorieID === $cat->categorieID) : ?>
+                                    $nbrCards[$count] = 0;
+                                    if ($card->categorieID === $cat->categorieID) :
+                                        $nbrCards[$count]++ ?>
                                         <div class="card flex-column align-item-center">
 
                                             <h1><?= $card->carteNom ?></h1>
@@ -37,18 +43,21 @@
                                             <div class="div2_2" style="display: none">
                                                 <div class="flex-column align-item-center">
                                                     <button type="button" onclick="changeDiv2()">annuler</button>
+
+                                                    <!-- formulaire pour bouger une catégorie -->
                                                     <form action="" method="post">
                                                         <label for="place">déplacer la carte dans :</label>
                                                         <select name="categorie" id="categorie" style="width: 90px;">
                                                             <?php foreach ($_SESSION["categories"] as $cate) : ?>
 
-                                                                <option value="<?=$cate->categorieID?>" <?php if($cate->categorieID == $card->categorieID) :?> selected <?php endif?>><?=$cate->categorieNom?></option>
+                                                                <option value="<?= $cate->categorieID ?>" <?php if ($cate->categorieID == $card->categorieID) : ?> selected <?php endif ?>><?= $cate->categorieNom ?></option>
 
-                                                            <?php endforeach?>
+                                                            <?php endforeach ?>
                                                         </select>
                                                         <input type="submit" name="switchCard" id="switchCard">
-                                                        <input class="hidden" type="numbre" name="cardID" id="cardID" value="<?= $card->cardID ?>">
+                                                        <input class="hidden" type="numbre" name="cardID" id="cardID" value="<?= $card->carteID ?>">
                                                     </form>
+                                                    <a href="/project?ProjetID=<?= $project->projetID ?>&catID=<?= $cat->categorieID ?>&cardID=<?= $card->carteID ?>">supprimer la carte</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -64,6 +73,11 @@
                                 <input type="submit" id="addCard" name="addCard">
                             </form>
                         </form>
+                        <?php if ($nbrCards[$count] != 0) : ?>
+                            <p style="font-size: small;">Veuillez vider les cartes avant de suprimer la catégorie</p>
+                        <?php else : ?>
+                            <a href="/project?ProjetID=<?= $project->projetID ?>&catID=<?= $cat->categorieID ?>">Supprimer la catégorie</a>
+                        <?php endif; ?>
                     </div>
 
 
@@ -74,14 +88,14 @@
 
             <div class="flexible">
                 <div class="div1 profileDiv">
-                    <button onclick="changeDiv()">ajouter une catégorie</button>
+                    <button onclick="changeDiv()">Ajouter une catégorie</button>
                 </div>
                 <div class="div2" style="display: none; margin:30px;">
                     <button onclick="changeDiv()">annuler</button>
                     <form action="" method="post" class="flex-column align-item-center">
                         <label for="catName">Nom de la catégorie</label>
                         <input type="text" name="catName" id="catName" required>
-                        <button type="submit" name="addCatBtn" id="addCatBtn">valider</button>
+                        <button type="submit" name="addCatBtn" id="addCatBtn">Valider</button>
                     </form>
                 </div>
             </div>
