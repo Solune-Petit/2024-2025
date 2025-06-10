@@ -1,5 +1,5 @@
 <?php
-// En cas d'erreur, on affiche le message de l'erreur attrapée
+//pour se connecter à la BDD de la salle de classe, il faut commenter les lignes 6 et 9 et décommenter les lignes 7 et 8
 
 try {
     //bdd perso
